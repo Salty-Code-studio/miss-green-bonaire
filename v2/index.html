@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Miss Green Bonaire</title>
+<meta name="description" content="Snorkel trips on Bonaire's first fully electric catamaran. Book in three steps: who's coming, which trip, which day.">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../img/ss-2-9.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Miss Green home">
+    <img src="../img/logo.png" alt="" width="34" height="34">
+    <span>Miss Green</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#included">What you get</a>
+    <a href="#cruise">Cruise guests</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <a class="btn btn-sm" href="#book">Book a trip</a>
+</header>
+
+<main>
+
+<section class="hero">
+  <img class="hero-img" src="../img/ss-2-9.jpg" alt="Miss Green catamaran on clear turquoise water, half above and half below the surface" fetchpriority="high">
+  <div class="hero-copy">
+    <h1>Snorkel, slide and swim from an electric boat.</h1>
+    <p>Book in three steps. It takes one minute.</p>
+    <div class="hero-cta">
+      <a class="btn btn-big" href="#book">Book a trip</a>
+    </div>
+    <p class="rating">Rated <strong>Excellent</strong> on Tripadvisor</p>
+  </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="bookTitle">
+  <h2 id="bookTitle">Book in 3 steps</h2>
+
+  <div class="booker">
+    <div class="bstep">
+      <h3><span class="num">1</span> How many people?</h3>
+      <div class="count">
+        <button type="button" class="step" data-step="-1" aria-label="One person less">&minus;</button>
+        <output id="guestsOut" aria-live="polite">6</output>
+        <button type="button" class="step" data-step="1" aria-label="One person more">+</button>
+      </div>
+      <p class="hint" id="guestsHint">Count everyone, kids too.</p>
+      <label class="switch">
+        <input type="checkbox" id="cruiseToggle">
+        <span class="switch-ui" aria-hidden="true"></span>
+        <span>We come from a cruise ship</span>
+      </label>
+    </div>
+
+    <fieldset class="bstep" id="tripStep">
+      <legend><h3><span class="num">2</span> Which trip?</h3></legend>
+      <div class="trips" id="trips">
+        <label class="trip">
+          <input type="radio" name="tour" value="mini">
+          <img src="../img/ss-homep1-1.jpg" alt="" loading="lazy">
+          <span class="trip-text"><strong>Short trip</strong><span>3 hours · sail and snorkel</span></span>
+          <span class="trip-price"><b data-price>$800</b><small data-each></small></span>
+        </label>
+        <label class="trip">
+          <input type="radio" name="tour" value="ocean" checked>
+          <img src="../img/ss-2-21.jpg" alt="" loading="lazy">
+          <span class="trip-text"><strong>Ocean trip <em>Most picked</em></strong><span>4 hours · 2 snorkel spots</span></span>
+          <span class="trip-price"><b data-price>$900</b><small data-each></small></span>
+        </label>
+        <label class="trip">
+          <input type="radio" name="tour" value="full">
+          <img src="../img/ss-2-25.jpg" alt="" loading="lazy">
+          <span class="trip-text"><strong>Long trip</strong><span>5 hours · more reef, more time</span></span>
+          <span class="trip-price"><b data-price>$1,000</b><small data-each></small></span>
+        </label>
+      </div>
+      <div class="trip trip-cruise" id="cruiseTrip" hidden>
+        <img src="../img/ss-2-3.jpg" alt="">
+        <span class="trip-text"><strong>Cruise ship trip</strong><span>4 hours · back before your ship leaves</span></span>
+      </div>
+      <p class="hint" id="priceHint">You pay for the whole boat, not per person.</p>
+    </fieldset>
+
+    <div class="bstep">
+      <h3><span class="num">3</span> Which day?</h3>
+      <div class="cal">
+        <div class="cal-head">
+          <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&lsaquo;</button>
+          <strong id="calTitle" aria-live="polite"></strong>
+          <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&rsaquo;</button>
+        </div>
+        <div class="cal-days" aria-hidden="true"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+    </div>
+
+    <div class="bsum">
+      <p class="sum-line" id="summary" aria-live="polite"></p>
+      <button type="button" class="btn btn-big" id="bookBtn" disabled>Pick a day first</button>
+      <p class="hint">You send us a WhatsApp message. We reply with a yes and how to pay. No payment now.</p>
+    </div>
+  </div>
+</section>
+
+<section class="included" id="included" aria-labelledby="incTitle">
+  <h2 id="incTitle">On every trip</h2>
+  <ul class="inc-grid">
+    <li><img src="../img/ss-2-18.jpg" alt="" loading="lazy"><span>Mask and fins. We help you put them on.</span></li>
+    <li><img src="../img/ss-2-13.jpg" alt="" loading="lazy"><span>Snorkel with a guide over the reef.</span></li>
+    <li><img src="../img/ss-2-21.jpg" alt="" loading="lazy"><span>A water slide off the boat.</span></li>
+    <li><img src="../img/ss-2-4.jpg" alt="" loading="lazy"><span>Drinks on board. Soda, punch, beer, wine.</span></li>
+  </ul>
+  <p class="fine">Also on board: captain, crew, music and a clean toilet. Holiday guests pay the Bonaire nature fee (STINAPA) themselves. People who live on Bonaire don't.</p>
+</section>
+
+<section class="electric">
+  <figure class="electric-img">
+    <img src="../img/ss-2-22.jpg" alt="Drone view of Miss Green sailing along the Bonaire coast" loading="lazy">
+  </figure>
+  <div class="electric-copy">
+    <h2>A quiet boat. No smelly engine.</h2>
+    <p>Miss Green runs on batteries. You hear the water, the music and each other. The fish like it too.</p>
+    <blockquote>
+      <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them.&rdquo;</p>
+      <cite>Francis F, Tripadvisor</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="food">
+  <div class="food-head">
+    <h2>Hungry? Add food.</h2>
+    <p>Pick a platter and tell us in your WhatsApp message.</p>
+  </div>
+  <div class="food-grid">
+    <figure><img src="../img/c-local-snacks.jpg" alt="Local snacks platter with pastechi and pika balls" loading="lazy"><figcaption>Local snacks</figcaption></figure>
+    <figure><img src="../img/c-bbq-platter.jpg" alt="BBQ platter" loading="lazy"><figcaption>BBQ</figcaption></figure>
+    <figure><img src="../img/c-fish-platter.jpg" alt="Fish platter" loading="lazy"><figcaption>Fish</figcaption></figure>
+    <figure><img src="../img/c-dutchplatter.jpg" alt="Dutch platter with cheese and sausage" loading="lazy"><figcaption>Dutch</figcaption></figure>
+    <figure><img src="../img/c-vega.jpg" alt="Vegetarian platter" loading="lazy"><figcaption>Vegetarian</figcaption></figure>
+    <figure><img src="../img/c-lunch-box.jpg" alt="Lunch box with wraps, salad and fruit" loading="lazy"><figcaption>Lunch box</figcaption></figure>
+  </div>
+</section>
+
+<section class="cruise" id="cruise">
+  <img class="cruise-img" src="../img/ss-2-3.jpg" alt="Guests swimming beside the catamaran" loading="lazy">
+  <div class="cruise-copy">
+    <h2>On a cruise ship?</h2>
+    <p>We pick a time that fits your ship. You are always back on time.</p>
+    <dl class="cruise-facts">
+      <div><dt>Where we meet</dt><dd>The parking lot next to Capriccio Restaurant. A 3 minute walk from the ship. Look for our sign.</dd></div>
+      <div><dt>Ship is late?</dt><dd>We move your trip.</dd></div>
+      <div><dt>Ship doesn't come?</dt><dd>You get all your money back.</dd></div>
+    </dl>
+    <a class="btn" href="#book" data-cruise>Book the cruise trip</a>
+  </div>
+</section>
+
+<section class="reviews" aria-labelledby="revTitle">
+  <h2 id="revTitle">What guests say</h2>
+  <div class="rev-grid">
+    <blockquote class="rev-big">
+      <p>&ldquo;On the way back we were accompanied by a small pod of dolphins and rum punch. What more could you ask for?&rdquo;</p>
+      <cite>Chris V, February 2025</cite>
+    </blockquote>
+    <blockquote>
+      <p>&ldquo;It was my first time snorkeling. They had me feeling well equipped and it was a blast.&rdquo;</p>
+      <cite>Vivian G, January 2025</cite>
+    </blockquote>
+    <blockquote>
+      <p>&ldquo;The boat was spotless and very comfortable.&rdquo;</p>
+      <cite>Christian W, February 2025</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Questions</h2>
+  <div class="faq-list">
+    <details>
+      <summary>Where does the boat leave from?</summary>
+      <p>From the marina near Plaza Resort. After you book we send you the way there and a short video.</p>
+    </details>
+    <details>
+      <summary>Can I swim if I've never snorkeled?</summary>
+      <p>Yes. A guide snorkels with you. Lots of guests try it for the first time on our boat.</p>
+    </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>After we say yes, you pay by bank transfer or in cash. You don't need a credit card.</p>
+    </details>
+    <details>
+      <summary>What do I bring?</summary>
+      <p>Swimwear, a towel and sunscreen. Shoes come off on the boat.</p>
+    </details>
+    <details>
+      <summary>What if we can't come?</summary>
+      <p>Cancel less than 30 days before: you pay 25%. Less than 3 days before: 50%. Less than 1 day before, or not showing up: the full price.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <img class="foot-img" src="../img/ss-2-0.jpg" alt="" loading="lazy">
+  <div class="foot-inner">
+    <h2>Ready? Pick your day.</h2>
+    <div class="foot-cta">
+      <a class="btn btn-big" href="#book">Book a trip</a>
+      <a class="btn btn-ghost" href="https://wa.me/5997016692">Ask a question on WhatsApp</a>
+    </div>
+    <div class="foot-meta">
+      <p>We reply Monday to Friday, 8:00 to 17:00.</p>
+      <p><a href="https://www.instagram.com/missgreensustainabletrips/">Instagram</a> <a href="https://www.facebook.com/profile.php?id=61564850934587">Facebook</a> <a href="https://www.tripadvisor.com/Search?q=Miss%20Green%20Bonaire">Tripadvisor</a></p>
+      <p class="mock">Concept v2 by Salty Code Studio. Not the live site.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float btn" href="#book">Book a trip</a>
+
+<script src="site.js"></script>
+</body>
+</html>
