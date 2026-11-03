@@ -1,0 +1,66 @@
+/* Reviews page: rating summary, one featured review, then every review readable at once in a calm column wall with photos. */
+
+.rv-hero .hero-img { object-position: 50% 45%; }
+.rv-hero h1 { max-width: 14ch; }
+.rv-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 25%, transparent 45%, rgb(4 22 26 / .55) 100%); }
+
+/* Rating summary */
+.rv-sum { max-width: 720px; margin: 0 auto; padding: clamp(36px, 5vw, 64px) var(--pad) clamp(24px, 3vw, 40px); display: grid; justify-items: center; text-align: center; }
+.rv-sum .award { margin-bottom: 20px; }
+.rv-sum p { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink-2); max-width: 40ch; }
+
+/* Featured review */
+.rv-feature { max-width: var(--max); margin: 0 auto; padding: clamp(32px, 5vw, 72px) var(--pad); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.rv-feature-img { margin: 0; border-radius: var(--r); overflow: hidden; aspect-ratio: 4 / 5; }
+.rv-feature-img img { width: 100%; height: 100%; object-fit: cover; }
+.rv-feature-copy { display: grid; gap: 20px; }
+.rv-feature-copy h2 { font-size: clamp(32px, 3.6vw, 52px); max-width: 16ch; }
+.rv-feature-copy blockquote { margin: 0; }
+.rv-feature-copy blockquote p { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.6; color: var(--ink-2); max-width: 46ch; }
+.rv-by { font-size: 16px; line-height: 1.9; color: var(--ink-2); }
+.rv-by span:not([aria-hidden]) { margin-left: 6px; }
+.rv-by b { color: var(--ink); }
+.rv-by .more-link { display: inline-flex; margin-left: 12px; }
+
+/* The wall: all reviews in columns, with photos between them */
+.rv-wall { background: var(--bg-2); padding: clamp(56px, 7vw, 110px) var(--pad); }
+.rv-wall > h2 { max-width: var(--max); margin: 0 auto clamp(28px, 3vw, 44px); font-size: clamp(28px, 3vw, 42px); }
+.rv-grid { max-width: var(--max); margin: 0 auto; columns: 3 300px; column-gap: 20px; }
+.rv-card, .rv-photo { break-inside: avoid; margin: 0 0 20px; }
+.rv-card { display: grid; gap: 12px; padding: 26px; border-radius: var(--r); background: #fff; box-shadow: 0 1px 2px rgb(0 60 70 / .05), 0 14px 30px -20px rgb(0 60 70 / .25); }
+.rv-card .star { width: 16px; height: 16px; }
+.rv-card h3 { font-size: 19px; font-stretch: 100%; letter-spacing: -.01em; line-height: 1.25; }
+.rv-card blockquote { margin: 0; }
+.rv-card blockquote p { font-size: 16px; line-height: 1.6; color: var(--ink-2); }
+.rv-who { display: flex; align-items: center; gap: 12px; margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--line); }
+.rv-av { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 999px; background: var(--mint); color: var(--deep); font-weight: 750; font-size: 15px; }
+.rv-who > span:nth-child(2) { display: grid; line-height: 1.25; }
+.rv-who small { color: var(--ink-2); font-size: 13px; }
+.rv-who a { margin-left: auto; font-size: 14px; font-weight: 650; color: var(--deep); text-decoration: none; padding: 6px 0; }
+.rv-who a:hover { text-decoration: underline; }
+.rv-photo img { width: 100%; height: auto; border-radius: var(--r); }
+.rv-photo figcaption { margin-top: 10px; font-size: 14px; color: var(--ink-2); }
+
+/* Closing call to action */
+.rv-end { max-width: 760px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) var(--pad) clamp(24px, 3vw, 40px); display: grid; justify-items: center; text-align: center; gap: 14px; }
+.rv-end > p { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink-2); }
+.rv-end-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 14px; }
+.rv-end .btn-line { min-height: 60px; padding: 0 28px; }
+
+
+@media (max-width: 767px) {
+  .rv-feature { grid-template-columns: 1fr; }
+  .rv-feature-img { aspect-ratio: 4 / 3; }
+  .rv-card { padding: 22px; }
+  .rv-photo img { aspect-ratio: 4 / 3; object-fit: cover; }
+  .rv-hero .hero-img { object-position: 55% 20%; }
+  .rv-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .3) 0%, transparent 22%, rgb(4 22 26 / .2) 40%, rgb(4 22 26 / .72) 100%); }
+  .rv-end-cta .btn { flex: 1 1 100%; white-space: normal; text-align: center; }
+}
+/* Equal space above and below */
+.rv-end { padding-top: clamp(64px, 8vw, 112px); padding-bottom: clamp(64px, 8vw, 112px); }
+.rv-sum { padding-bottom: clamp(36px, 5vw, 64px); }
+.rv-hero .hero-img { object-position: 55% 18%; }
+.rv-hero::after { background: linear-gradient(90deg, rgb(4 22 26 / .55) 0%, rgb(4 22 26 / .25) 40%, transparent 65%), linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 30%); }
+.rv-hero .crumbs { text-shadow: 0 1px 8px rgb(4 22 26 / .6); }
+.rv-hero .hero-img { object-position: 50% 30%; }

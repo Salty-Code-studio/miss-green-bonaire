@@ -5,186 +5,461 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Miss Green Bonaire</title>
-<meta name="description" content="Snorkel trips on Bonaire's first fully electric catamaran. Book in three steps: who's coming, which trip, which day.">
+<meta name="description" content="Snorkel trips on Bonaire's first fully electric catamaran. Book in three easy steps.">
 <link rel="icon" href="../img/logo.png">
+<link rel="apple-touch-icon" href="../img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="../img/ss-2-9.jpg">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Urbanist:wght@500..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../img/ss-2-0.jpg">
+<link rel="stylesheet" href="style.css?v=20261102225753">
+<script>{ const t = new URLSearchParams(location.search).get("theme"); document.documentElement.dataset.theme = t || "lagoon"; }</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .7 3.2 2.4 3.5 5.2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20.5c.8-4 4-6 8-6s7.2 2 8 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M9 8.5c0 3.3 3.2 6.5 6.5 6.5l1-1.6-2-1-1 .8c-1-.5-2-1.5-2.6-2.6l.8-1-1-2Z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 7l5-2 8 3 5-2v12l-5 2-8-3-5 2Z"/><path d="M8 5v12M16 8v12"/></symbol>
+    <symbol id="i-mask" viewBox="0 0 24 24"><path d="M3 10.5c0-1.4 1-2.5 2.5-2.5h9c1.4 0 2.5 1.1 2.5 2.5V13c0 1.4-1.1 2.5-2.5 2.5h-1.6L11 13.5h-1L8.1 15.5H5.5A2.5 2.5 0 0 1 3 13Z"/><path d="M20 3v10.5a4.5 4.5 0 0 1-4.5 4.5H13"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  </defs>
+</svg>
 
 <header class="nav" id="top">
-  <a class="brand" href="#top" aria-label="Miss Green home">
-    <img src="../img/logo.png" alt="" width="34" height="34">
-    <span>Miss Green</span>
-  </a>
+  <a class="brand" href="#top" aria-label="Miss Green home"><img class="wm wm-light" src="../img/wordmark-white.png" alt="Miss Green" width="800" height="234"><img class="wm wm-dark" src="../img/wordmark-navy.png" alt="" width="800" height="234" aria-hidden="true"></a>
   <nav aria-label="Main">
-    <a href="#included">What you get</a>
-    <a href="#cruise">Cruise guests</a>
-    <a href="#faq">Questions</a>
+    <a href="included/" data-sec="included">What's included</a>
+    <a href="the-boat/" data-sec="eco">The boat</a>
+    <a href="reviews/" data-sec="reviews">Reviews</a>
+    <a href="cruise-guests/" data-sec="cruise">Cruise guests</a>
+    <a href="faq/" data-sec="faq">Questions</a>
   </nav>
-  <a class="btn btn-sm" href="#book">Book a trip</a>
+  <a class="btn btn-sm nav-cta" href="#book">Book a trip <span aria-hidden="true">&rarr;</span></a>
 </header>
 
 <main>
 
 <section class="hero">
-  <img class="hero-img" src="../img/ss-2-9.jpg" alt="Miss Green catamaran on clear turquoise water, half above and half below the surface" fetchpriority="high">
+  <img class="hero-img" src="../img/ss-2-0.jpg" alt="A guest jumps off the top deck of Miss Green while friends float on the mat in turquoise water" fetchpriority="high">
   <div class="hero-copy">
     <h1>Snorkel, slide and swim from an electric boat.</h1>
     <p>Book in three steps. It takes one minute.</p>
     <div class="hero-cta">
       <a class="btn btn-big" href="#book">Book a trip</a>
     </div>
-    <p class="rating">Rated <strong>Excellent</strong> on Tripadvisor</p>
+  </div>
+  <ul class="press" aria-label="Awards">
+    <li><svg class="laurel" viewBox="0 0 74 124" aria-hidden="true"><path class="stem" d="M54.4 105.0 A46 46 0 0 1 29.8 29.2"/><g><ellipse cx="53.2" cy="110.9" rx="4.6" ry="10.5" transform="rotate(-130 53.2 110.9)"/><ellipse cx="55.7" cy="99.1" rx="4.6" ry="10.5" transform="rotate(-206 55.7 99.1)"/><ellipse cx="40.4" cy="106.3" rx="4.4" ry="10.1" transform="rotate(-115 40.4 106.3)"/><ellipse cx="45.8" cy="95.6" rx="4.4" ry="10.1" transform="rotate(-191 45.8 95.6)"/><ellipse cx="29.2" cy="98.6" rx="4.3" ry="9.8" transform="rotate(-100 29.2 98.6)"/><ellipse cx="37.2" cy="89.7" rx="4.3" ry="9.8" transform="rotate(-176 37.2 89.7)"/><ellipse cx="20.4" cy="88.3" rx="4.1" ry="9.4" transform="rotate(-85 20.4 88.3)"/><ellipse cx="30.5" cy="81.8" rx="4.1" ry="9.4" transform="rotate(-161 30.5 81.8)"/><ellipse cx="14.5" cy="76.1" rx="4.0" ry="9.0" transform="rotate(-70 14.5 76.1)"/><ellipse cx="26.0" cy="72.4" rx="4.0" ry="9.0" transform="rotate(-146 26.0 72.4)"/><ellipse cx="12.1" cy="62.7" rx="3.8" ry="8.7" transform="rotate(-55 12.1 62.7)"/><ellipse cx="24.1" cy="62.1" rx="3.8" ry="8.7" transform="rotate(-131 24.1 62.1)"/><ellipse cx="13.1" cy="49.2" rx="3.6" ry="8.3" transform="rotate(-40 13.1 49.2)"/><ellipse cx="24.9" cy="51.7" rx="3.6" ry="8.3" transform="rotate(-116 24.9 51.7)"/><ellipse cx="17.7" cy="36.4" rx="3.5" ry="7.9" transform="rotate(-25 17.7 36.4)"/><ellipse cx="28.4" cy="41.8" rx="3.5" ry="7.9" transform="rotate(-101 28.4 41.8)"/><ellipse cx="25.4" cy="25.2" rx="3.3" ry="7.6" transform="rotate(-10 25.4 25.2)"/><ellipse cx="34.3" cy="33.2" rx="3.3" ry="7.6" transform="rotate(-86 34.3 33.2)"/><ellipse cx="35.1" cy="20.3" rx="4" ry="9" transform="rotate(-53 35.1 20.3)"/></g></svg><span class="press-mid"><small>First on Bonaire</small><b>Electric catamaran</b></span><svg class="laurel flip" viewBox="0 0 74 124" aria-hidden="true"><path class="stem" d="M54.4 105.0 A46 46 0 0 1 29.8 29.2"/><g><ellipse cx="53.2" cy="110.9" rx="4.6" ry="10.5" transform="rotate(-130 53.2 110.9)"/><ellipse cx="55.7" cy="99.1" rx="4.6" ry="10.5" transform="rotate(-206 55.7 99.1)"/><ellipse cx="40.4" cy="106.3" rx="4.4" ry="10.1" transform="rotate(-115 40.4 106.3)"/><ellipse cx="45.8" cy="95.6" rx="4.4" ry="10.1" transform="rotate(-191 45.8 95.6)"/><ellipse cx="29.2" cy="98.6" rx="4.3" ry="9.8" transform="rotate(-100 29.2 98.6)"/><ellipse cx="37.2" cy="89.7" rx="4.3" ry="9.8" transform="rotate(-176 37.2 89.7)"/><ellipse cx="20.4" cy="88.3" rx="4.1" ry="9.4" transform="rotate(-85 20.4 88.3)"/><ellipse cx="30.5" cy="81.8" rx="4.1" ry="9.4" transform="rotate(-161 30.5 81.8)"/><ellipse cx="14.5" cy="76.1" rx="4.0" ry="9.0" transform="rotate(-70 14.5 76.1)"/><ellipse cx="26.0" cy="72.4" rx="4.0" ry="9.0" transform="rotate(-146 26.0 72.4)"/><ellipse cx="12.1" cy="62.7" rx="3.8" ry="8.7" transform="rotate(-55 12.1 62.7)"/><ellipse cx="24.1" cy="62.1" rx="3.8" ry="8.7" transform="rotate(-131 24.1 62.1)"/><ellipse cx="13.1" cy="49.2" rx="3.6" ry="8.3" transform="rotate(-40 13.1 49.2)"/><ellipse cx="24.9" cy="51.7" rx="3.6" ry="8.3" transform="rotate(-116 24.9 51.7)"/><ellipse cx="17.7" cy="36.4" rx="3.5" ry="7.9" transform="rotate(-25 17.7 36.4)"/><ellipse cx="28.4" cy="41.8" rx="3.5" ry="7.9" transform="rotate(-101 28.4 41.8)"/><ellipse cx="25.4" cy="25.2" rx="3.3" ry="7.6" transform="rotate(-10 25.4 25.2)"/><ellipse cx="34.3" cy="33.2" rx="3.3" ry="7.6" transform="rotate(-86 34.3 33.2)"/><ellipse cx="35.1" cy="20.3" rx="4" ry="9" transform="rotate(-53 35.1 20.3)"/></g></svg></li>
+    <li><svg class="laurel" viewBox="0 0 74 124" aria-hidden="true"><path class="stem" d="M54.4 105.0 A46 46 0 0 1 29.8 29.2"/><g><ellipse cx="53.2" cy="110.9" rx="4.6" ry="10.5" transform="rotate(-130 53.2 110.9)"/><ellipse cx="55.7" cy="99.1" rx="4.6" ry="10.5" transform="rotate(-206 55.7 99.1)"/><ellipse cx="40.4" cy="106.3" rx="4.4" ry="10.1" transform="rotate(-115 40.4 106.3)"/><ellipse cx="45.8" cy="95.6" rx="4.4" ry="10.1" transform="rotate(-191 45.8 95.6)"/><ellipse cx="29.2" cy="98.6" rx="4.3" ry="9.8" transform="rotate(-100 29.2 98.6)"/><ellipse cx="37.2" cy="89.7" rx="4.3" ry="9.8" transform="rotate(-176 37.2 89.7)"/><ellipse cx="20.4" cy="88.3" rx="4.1" ry="9.4" transform="rotate(-85 20.4 88.3)"/><ellipse cx="30.5" cy="81.8" rx="4.1" ry="9.4" transform="rotate(-161 30.5 81.8)"/><ellipse cx="14.5" cy="76.1" rx="4.0" ry="9.0" transform="rotate(-70 14.5 76.1)"/><ellipse cx="26.0" cy="72.4" rx="4.0" ry="9.0" transform="rotate(-146 26.0 72.4)"/><ellipse cx="12.1" cy="62.7" rx="3.8" ry="8.7" transform="rotate(-55 12.1 62.7)"/><ellipse cx="24.1" cy="62.1" rx="3.8" ry="8.7" transform="rotate(-131 24.1 62.1)"/><ellipse cx="13.1" cy="49.2" rx="3.6" ry="8.3" transform="rotate(-40 13.1 49.2)"/><ellipse cx="24.9" cy="51.7" rx="3.6" ry="8.3" transform="rotate(-116 24.9 51.7)"/><ellipse cx="17.7" cy="36.4" rx="3.5" ry="7.9" transform="rotate(-25 17.7 36.4)"/><ellipse cx="28.4" cy="41.8" rx="3.5" ry="7.9" transform="rotate(-101 28.4 41.8)"/><ellipse cx="25.4" cy="25.2" rx="3.3" ry="7.6" transform="rotate(-10 25.4 25.2)"/><ellipse cx="34.3" cy="33.2" rx="3.3" ry="7.6" transform="rotate(-86 34.3 33.2)"/><ellipse cx="35.1" cy="20.3" rx="4" ry="9" transform="rotate(-53 35.1 20.3)"/></g></svg><span class="press-mid"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><b>5-star reviews</b><small>Tripadvisor</small></span><svg class="laurel flip" viewBox="0 0 74 124" aria-hidden="true"><path class="stem" d="M54.4 105.0 A46 46 0 0 1 29.8 29.2"/><g><ellipse cx="53.2" cy="110.9" rx="4.6" ry="10.5" transform="rotate(-130 53.2 110.9)"/><ellipse cx="55.7" cy="99.1" rx="4.6" ry="10.5" transform="rotate(-206 55.7 99.1)"/><ellipse cx="40.4" cy="106.3" rx="4.4" ry="10.1" transform="rotate(-115 40.4 106.3)"/><ellipse cx="45.8" cy="95.6" rx="4.4" ry="10.1" transform="rotate(-191 45.8 95.6)"/><ellipse cx="29.2" cy="98.6" rx="4.3" ry="9.8" transform="rotate(-100 29.2 98.6)"/><ellipse cx="37.2" cy="89.7" rx="4.3" ry="9.8" transform="rotate(-176 37.2 89.7)"/><ellipse cx="20.4" cy="88.3" rx="4.1" ry="9.4" transform="rotate(-85 20.4 88.3)"/><ellipse cx="30.5" cy="81.8" rx="4.1" ry="9.4" transform="rotate(-161 30.5 81.8)"/><ellipse cx="14.5" cy="76.1" rx="4.0" ry="9.0" transform="rotate(-70 14.5 76.1)"/><ellipse cx="26.0" cy="72.4" rx="4.0" ry="9.0" transform="rotate(-146 26.0 72.4)"/><ellipse cx="12.1" cy="62.7" rx="3.8" ry="8.7" transform="rotate(-55 12.1 62.7)"/><ellipse cx="24.1" cy="62.1" rx="3.8" ry="8.7" transform="rotate(-131 24.1 62.1)"/><ellipse cx="13.1" cy="49.2" rx="3.6" ry="8.3" transform="rotate(-40 13.1 49.2)"/><ellipse cx="24.9" cy="51.7" rx="3.6" ry="8.3" transform="rotate(-116 24.9 51.7)"/><ellipse cx="17.7" cy="36.4" rx="3.5" ry="7.9" transform="rotate(-25 17.7 36.4)"/><ellipse cx="28.4" cy="41.8" rx="3.5" ry="7.9" transform="rotate(-101 28.4 41.8)"/><ellipse cx="25.4" cy="25.2" rx="3.3" ry="7.6" transform="rotate(-10 25.4 25.2)"/><ellipse cx="34.3" cy="33.2" rx="3.3" ry="7.6" transform="rotate(-86 34.3 33.2)"/><ellipse cx="35.1" cy="20.3" rx="4" ry="9" transform="rotate(-53 35.1 20.3)"/></g></svg></li>
+  </ul>
+  <div class="hero-wave" aria-hidden="true">
+    <svg class="wave-front" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 62 C240 98 480 22 720 58 C960 94 1200 30 1440 60 V100 H0 Z"/></svg>
   </div>
 </section>
 
 <section class="book" id="book" aria-labelledby="bookTitle">
-  <h2 id="bookTitle">Book in 3 steps</h2>
+  <div class="book-side">
+    <h2 id="bookTitle">Book in 3 easy steps</h2>
+    <p>Pick a trip. Pick a day. Tell us who you are. That's it.</p>
+    <ol class="book-list">
+      <li><button type="button" data-jump="1"><span>1</span>Choose your trip</button></li>
+      <li><button type="button" data-jump="2"><span>2</span><b id="jump2">Pick a day and time</b></button></li>
+      <li><button type="button" data-jump="3"><span>3</span>Your details</button></li>
+    </ol>
+  </div>
 
-  <div class="booker">
-    <div class="bstep">
-      <h3><span class="num">1</span> How many people?</h3>
-      <div class="count">
-        <button type="button" class="step" data-step="-1" aria-label="One person less">&minus;</button>
-        <output id="guestsOut" aria-live="polite">6</output>
-        <button type="button" class="step" data-step="1" aria-label="One person more">+</button>
-      </div>
-      <p class="hint" id="guestsHint">Count everyone, kids too.</p>
-      <label class="switch">
-        <input type="checkbox" id="cruiseToggle">
-        <span class="switch-ui" aria-hidden="true"></span>
-        <span>We come from a cruise ship</span>
-      </label>
+  <div class="wiz" id="wiz">
+    <div class="wiz-top">
+      <button type="button" class="wiz-back" id="wizBack" hidden><span aria-hidden="true">&lsaquo;</span> Back</button>
+      <p class="wiz-count"><span id="wizCount">1 of 3</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
     </div>
 
-    <fieldset class="bstep" id="tripStep">
-      <legend><h3><span class="num">2</span> Which trip?</h3></legend>
-      <div class="trips" id="trips">
-        <label class="trip">
-          <input type="radio" name="tour" value="mini">
-          <img src="../img/ss-homep1-1.jpg" alt="" loading="lazy">
-          <span class="trip-text"><strong>Short trip</strong><span>3 hours · sail and snorkel</span></span>
-          <span class="trip-price"><b data-price>$800</b><small data-each></small></span>
-        </label>
-        <label class="trip">
-          <input type="radio" name="tour" value="ocean" checked>
-          <img src="../img/ss-2-21.jpg" alt="" loading="lazy">
-          <span class="trip-text"><strong>Ocean trip <em>Most picked</em></strong><span>4 hours · 2 snorkel spots</span></span>
-          <span class="trip-price"><b data-price>$900</b><small data-each></small></span>
-        </label>
-        <label class="trip">
-          <input type="radio" name="tour" value="full">
-          <img src="../img/ss-2-25.jpg" alt="" loading="lazy">
-          <span class="trip-text"><strong>Long trip</strong><span>5 hours · more reef, more time</span></span>
-          <span class="trip-price"><b data-price>$1,000</b><small data-each></small></span>
-        </label>
-      </div>
-      <div class="trip trip-cruise" id="cruiseTrip" hidden>
-        <img src="../img/ss-2-3.jpg" alt="">
-        <span class="trip-text"><strong>Cruise ship trip</strong><span>4 hours · back before your ship leaves</span></span>
-      </div>
-      <p class="hint" id="priceHint">You pay for the whole boat, not per person.</p>
-    </fieldset>
-
-    <div class="bstep">
-      <h3><span class="num">3</span> Which day?</h3>
-      <div class="cal">
-        <div class="cal-head">
-          <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&lsaquo;</button>
-          <strong id="calTitle" aria-live="polite"></strong>
-          <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&rsaquo;</button>
+    <form id="wizForm" novalidate>
+      <!-- Step 1: trip -->
+      <div class="wiz-step" data-step="1">
+        <h3>Choose your trip</h3>
+        <p class="wiz-sub">Bonaire's first fully electric catamaran</p>
+        <div class="opts">
+          <label class="opt">
+            <input type="radio" name="tour" value="mini">
+            <img src="../img/ss-2-22.jpg" alt="" loading="lazy">
+            <span class="opt-body">
+              <strong>Mini Escape</strong>
+              <span class="meta"><svg class="ico"><use href="#i-clock"/></svg>3 hours</span>
+              <b class="opt-price" data-price></b>
+            </span>
+            <span class="radio" aria-hidden="true"></span>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tour" value="ocean" checked>
+            <img src="../img/ss-2-1.jpg" alt="" loading="lazy">
+            <span class="opt-body">
+              <strong>Ocean Adventure</strong>
+              <span class="meta"><svg class="ico"><use href="#i-clock"/></svg>4 hours</span>
+              <span class="pill">Most popular</span>
+              <b class="opt-price" data-price></b>
+            </span>
+            <span class="radio" aria-hidden="true"></span>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tour" value="full">
+            <img src="../img/ss-2-12.jpg" alt="" loading="lazy">
+            <span class="opt-body">
+              <strong>Full Experience</strong>
+              <span class="meta"><svg class="ico"><use href="#i-clock"/></svg>5 hours</span>
+              <b class="opt-price" data-price></b>
+            </span>
+            <span class="radio" aria-hidden="true"></span>
+          </label>
+          <label class="opt">
+            <input type="radio" name="tour" value="cruise">
+            <img src="../img/ss-2-3.jpg" alt="" loading="lazy">
+            <span class="opt-body">
+              <strong>Cruise Ship Tour</strong>
+              <span class="meta"><svg class="ico"><use href="#i-clock"/></svg>4 hours</span>
+              <b class="opt-price opt-ask">Price on request</b>
+            </span>
+            <span class="radio" aria-hidden="true"></span>
+          </label>
         </div>
-        <div class="cal-days" aria-hidden="true"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
-        <div class="cal-grid" id="calGrid"></div>
+        <p class="wiz-note" id="tripNote"></p>
+        <button type="button" class="custom" id="customBtn">
+          <svg class="ico ico-lg"><use href="#i-map"/></svg>
+          <span class="custom-text"><small>Want a different kind of day?</small><strong>Custom trip</strong><span>Your hours, your food, your extras</span></span>
+          <span class="custom-btn">Plan a custom trip <span aria-hidden="true">&rarr;</span></span>
+        </button>
+        <button type="button" class="wiz-next" data-go="2">Next: pick a day <span aria-hidden="true">&rarr;</span></button>
       </div>
+
+      <!-- Step 2: day, time, people -->
+      <div class="wiz-step" data-step="2" hidden>
+        <h3 id="step2Title">Choose a date &amp; time</h3>
+        <div class="cal">
+          <div class="cal-head">
+            <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&lsaquo;</button>
+            <strong id="calTitle" aria-live="polite"></strong>
+            <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&rsaquo;</button>
+          </div>
+          <div class="cal-days" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+
+        <div class="wiz-block" id="timeBlock">
+          <h4>Select a time</h4>
+          <div class="times" id="times"></div>
+        </div>
+        <div class="wiz-block" id="shipBlock" hidden>
+          <h4><label for="ship">Your ship's name</label></h4>
+          <input class="field-plain" id="ship" name="ship" autocomplete="off" placeholder="For example: Carnival Magic">
+          <p class="wiz-note">We plan the trip around your time in port.</p>
+        </div>
+
+        <div class="people std-only">
+          <h4>People</h4>
+          <button type="button" class="step" data-step="-1" aria-label="One person less">&minus;</button>
+          <output id="guestsOut" aria-live="polite">4</output>
+          <button type="button" class="step" data-step="1" aria-label="One person more">+</button>
+          <span class="people-note" id="peopleNote"></span>
+        </div>
+
+        <!-- Custom trip builder (only when "Plan a custom trip" was picked) -->
+        <div class="wiz-block slide custom-only">
+          <div class="slide-head"><h4><label for="cGuests">How many people?</label></h4><output id="cGuestsOut" for="cGuests">10</output></div>
+          <input type="range" id="cGuests" min="1" max="50" value="10">
+          <div class="slide-scale" aria-hidden="true"><span>1</span><span>25</span><span>50</span></div>
+        </div>
+        <div class="wiz-block slide custom-only">
+          <div class="slide-head"><h4><label for="cHours">How long on the water?</label></h4><output id="cHoursOut" for="cHours">5 hours</output></div>
+          <input type="range" id="cHours" min="3" max="8" step="1" value="5">
+          <div class="slide-scale" aria-hidden="true"><span>3 h</span><span>8 h</span></div>
+        </div>
+        <fieldset class="wiz-block custom-only custom-wide">
+          <legend><h4>Add food</h4></legend>
+          <p class="wiz-note left">Food is extra. Pick as many as you like and we add the price to your quote.</p>
+          <div class="food-pick">
+            <label><input type="checkbox" name="food" value="Local snacks"><img src="../img/c-local-snacks.jpg" alt="" loading="lazy"><span>Local snacks</span></label>
+            <label><input type="checkbox" name="food" value="BBQ"><img src="../img/c-bbq-platter.jpg" alt="" loading="lazy"><span>BBQ</span></label>
+            <label><input type="checkbox" name="food" value="Fish"><img src="../img/c-fish-platter.jpg" alt="" loading="lazy"><span>Fish</span></label>
+            <label><input type="checkbox" name="food" value="Dutch"><img src="../img/c-dutchplatter.jpg" alt="" loading="lazy"><span>Dutch</span></label>
+            <label><input type="checkbox" name="food" value="Vegetarian"><img src="../img/c-vega.jpg" alt="" loading="lazy"><span>Vegetarian</span></label>
+            <label><input type="checkbox" name="food" value="Lunch box"><img src="../img/c-lunch-box.jpg" alt="" loading="lazy"><span>Lunch box</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="wiz-block custom-only custom-wide">
+          <legend><h4>Anything extra?</h4></legend>
+          <p class="wiz-note left">Tell us your wishes. We check what's possible.</p>
+          <div class="chips">
+            <label><input type="checkbox" name="extra" value="Birthday or party"><span>Birthday or party</span></label>
+            <label><input type="checkbox" name="extra" value="Extra snorkel stop"><span>Extra snorkel stop</span></label>
+            <label><input type="checkbox" name="extra" value="Sunset sail"><span>Sunset sail</span></label>
+            <label><input type="checkbox" name="extra" value="Decorations on board"><span>Decorations on board</span></label>
+            <label><input type="checkbox" name="extra" value="Our own playlist"><span>Our own playlist</span></label>
+            <label><input type="checkbox" name="extra" value="Team or company outing"><span>Team or company outing</span></label>
+          </div>
+          <textarea id="cNotes" rows="3" placeholder="Anything else? For example: we want to see turtles."></textarea>
+        </fieldset>
+
+        <div class="sum-row">
+          <span id="sum2"></span>
+          <b id="price2"></b>
+        </div>
+        <button type="button" class="wiz-next" data-go="3" id="next2" disabled>Next: your details <span aria-hidden="true">&rarr;</span></button>
+      </div>
+
+      <!-- Step 3: details -->
+      <div class="wiz-step" data-step="3" hidden>
+        <h3>Your details</h3>
+        <label class="field"><svg class="ico"><use href="#i-user"/></svg><span class="sr">Your name</span><input name="name" id="fName" autocomplete="name" placeholder="Your name" required></label>
+        <label class="field"><svg class="ico"><use href="#i-mail"/></svg><span class="sr">Email address</span><input name="email" id="fEmail" type="email" autocomplete="email" placeholder="Email address" required></label>
+        <label class="field"><svg class="ico"><use href="#i-chat"/></svg><span class="sr">Mobile or WhatsApp</span><input name="phone" id="fPhone" type="tel" autocomplete="tel" placeholder="Mobile / WhatsApp"></label>
+        <p class="wiz-error" id="formError" role="alert" hidden></p>
+
+        <div class="sum-card">
+          <div class="sum-top">
+            <img id="sumImg" src="../img/ss-2-1.jpg" alt="">
+            <div>
+              <h4 id="sumName"></h4>
+              <p><svg class="ico"><use href="#i-clock"/></svg><span id="sumHours"></span></p>
+              <p><svg class="ico"><use href="#i-cal"/></svg><span id="sumWhen"></span></p>
+              <p><svg class="ico"><use href="#i-people"/></svg><span id="sumPeople"></span></p>
+              <p id="sumExtrasRow" hidden><svg class="ico"><use href="#i-mask"/></svg><span id="sumExtras"></span></p>
+            </div>
+          </div>
+          <div class="sum-total">
+            <div><strong>Total</strong><span id="sumNote"></span></div>
+            <b id="sumTotal"></b>
+          </div>
+        </div>
+
+        <div class="inc-box">
+          <svg class="ico ico-lg"><use href="#i-mask"/></svg>
+          <div><small>Included</small><p>Guided snorkel · Open bar · Snorkel gear · Slide &amp; float</p></div>
+        </div>
+
+        <button type="submit" class="wiz-next" id="submitBtn">Book this trip <span aria-hidden="true">&rarr;</span></button>
+        <p class="wiz-foot" id="submitFoot">We'll email your trip details.</p>
+      </div>
+
+      <!-- Done -->
+      <div class="wiz-step wiz-done" data-step="4" hidden>
+        <div class="done-check" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></div>
+        <h3>Thanks, <span id="doneName"></span>!</h3>
+        <p>We got your request for <b id="doneTrip"></b>. We check the boat and send your trip details to <b id="doneEmail"></b>.</p>
+        <a class="wiz-next wiz-next-alt" id="doneWa" href="#" target="_blank" rel="noopener">Also send it on WhatsApp</a>
+        <button type="button" class="wiz-link" id="restart">Book another trip</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="revTitle">
+  <div class="rev-head">
+    <div class="rev-main">
+    <div class="rev-intro">
+    <h2 id="revTitle">What guests say</h2>
+    <p>Real reviews from real guests. Tap any card to read it on Tripadvisor.</p>
+    </div>
+    <div class="rev-rail" id="revRail" tabindex="0" aria-label="Guest reviews, scroll sideways for more">
+      <ul class="rev-track" id="revTrack">
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Fantastic experience</strong>
+          <p>&ldquo;We snorkelled over two sites from the quiet pristine eco friendly catamaran. Saw the coral reefs, many fish and a turtle, I didn&#x27;t want to leave the water! On the way back we were accompanied by a small pod of dolphins and rum punch. What more could you ask for?&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">C</span><span><b>Chris V</b><small>Feb 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Chris V's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Superb snorkelling!</strong>
+          <p>&ldquo;The boat was lovely and clean, plenty seats, and equipment. They took us to an island where we saw multiple types of fish and corals. The staff were very helpful and friendly, after snorkelling drinks were plentiful. Even better that it&#x27;s eco friendly!&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">L</span><span><b>Lyn B</b><small>Feb 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Lyn B's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Bonaire Electric Catamaran &amp; Snorkel</strong>
+          <p>&ldquo;The staff were crackerjack, switched on, friendly &amp; welcoming &amp; they were very helpful to the less confident snorkeler. The boat was spotless and very comfortable.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">C</span><span><b>Christian W</b><small>Feb 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Christian W's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Amazing trip/boat/crew!</strong>
+          <p>&ldquo;Truly amazing staff, great snorkelling, equipment was super clean (toilet included!) and free bar. The boat itself was absolutely stunning! We had the best time.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">J</span><span><b>Jodie M</b><small>Feb 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Jodie M's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Crystal-clear waters &amp; expert guides</strong>
+          <p>&ldquo;It was my first time snorkeling, and the crew was extremely helpful on giving me tips. I admit I was a little nervous at first, but they had me feeling well equipped and it was a blast.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">V</span><span><b>Vivian G</b><small>Jan 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Vivian G's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Highly recommended</strong>
+          <p>&ldquo;Amazing trip, worth every penny. Gorgeous new boat with plenty of room to move around. Whether you are an experienced or nervous snorkeler, the crew are there to help as much or as little as required.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">J</span><span><b>Janet R</b><small>Jan 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Janet R's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Anytime again!</strong>
+          <p>&ldquo;Super nice, friendly, competent team. The boat is super clean. Consideration is also given to the environment, corals and creatures! You can slide off the ship into the sea or even jump if you want.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">N</span><span><b>Nadine</b><small>Jan 2025</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Nadine's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Eco-friendly exploration and fun</strong>
+          <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them, and the information given was the perfect balance between natural history expertise and sheer fun!&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">F</span><span><b>Francis F</b><small>Dec 2024</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Francis F's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>You have to book!</strong>
+          <p>&ldquo;We had an amazing time on Miss Green. Highly recommend due to the attentive and social staff. We were given some great history and insight into the island and waters. Can&#x27;t wait to visit again!&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">E</span><span><b>ECUtrav</b><small>Dec 2024</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read ECUtrav's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+        <li class="rev-card">
+          <div class="rev-top"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="rev-src">Tripadvisor</span></div>
+          <strong>Miss Green Snorkeling</strong>
+          <p>&ldquo;We did a boat trip to snorkel around Klein Bonaire. It was just amazing. The crew were so kind and funny. We had the time of our lives.&rdquo;</p>
+          <div class="rev-who"><span class="rev-av" aria-hidden="true">S</span><span><b>Sandra P</b><small>Nov 2024</small></span>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html#REVIEWS" target="_blank" rel="noopener" aria-label="Read Sandra P's review on Tripadvisor">Read <span aria-hidden="true">&#8599;</span></a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="rev-foot">
+      <a class="btn" href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html" target="_blank" rel="noopener">Read all reviews on Tripadvisor <span aria-hidden="true">&#8599;</span></a>
+      <a class="more-link" href="reviews/">More reviews <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    </div>
+    <div class="mosaic mosaic-r" aria-hidden="true"><div class="m-col" style="--off:20px" data-speed="30"><figure style="--ar:3/4"><img src="../img/ss-2-7.jpg" alt="Friends laughing on deck" loading="lazy"></figure><figure style="--ar:1/1"><img src="../img/ss-homep1-1.jpg" alt="Guests on the floating mat" loading="lazy"></figure><figure style="--ar:4/5"><img src="../img/ss-2-1.jpg" alt="Miss Green near the island" loading="lazy"></figure><figure style="--ar:1/1"><img src="../img/ss-2-25.jpg" alt="" loading="lazy"></figure><figure style="--ar:4/5"><img src="../img/ss-homep-1.jpg" alt="" loading="lazy"></figure></div><div class="m-col" style="--off:-120px" data-speed="-40"><figure style="--ar:4/5"><img src="../img/ss-2-24.jpg" alt="A guest flying down the slide" loading="lazy"></figure><figure style="--ar:3/4"><img src="../img/ss-2-12.jpg" alt="Snorkellers over the reef" loading="lazy"></figure><figure style="--ar:1/1"><img src="../img/ss-2-14.jpg" alt="Climbing back on board" loading="lazy"></figure><figure style="--ar:3/4"><img src="../img/ss-2-20.jpg" alt="" loading="lazy"></figure><figure style="--ar:1/1"><img src="../img/ss-2-0.jpg" alt="" loading="lazy"></figure></div><div class="m-col m-outer" style="--off:-30px" data-speed="60"><figure style="--ar:1/1"><img src="../img/ss-homep3-1.jpg" alt="Guests toasting on board" loading="lazy"></figure><figure style="--ar:3/4"><img src="../img/ss-2-3.jpg" alt="Swimmers next to the boat" loading="lazy"></figure><figure style="--ar:4/5"><img src="../img/ss-2-4.jpg" alt="Crew serving drinks" loading="lazy"></figure><figure style="--ar:4/5"><img src="../img/ss-2-17.jpg" alt="" loading="lazy"></figure><figure style="--ar:3/4"><img src="../img/ss-2-14.jpg" alt="" loading="lazy"></figure></div></div>
+  </div>
+</section>
+
+<section class="eco" id="eco" aria-labelledby="ecoTitle">
+  <div class="spec-inner">
+    <header class="spec-head">
+      <div>
+        <h2 id="ecoTitle">Bonaire's first <br>fully electric catamaran.</h2>
+      </div>
+    </header>
+
+    <div class="spec-grid">
+      <figure class="spec-panel spec-boat">
+        <figcaption class="panel-bar"><span>Miss Green</span></figcaption>
+        <div class="boat-frame">
+          <img src="../img/ss-2-1.jpg" alt="Miss Green, a white two-deck catamaran with a water slide, sailing past Klein Bonaire" loading="lazy">
+          <svg viewBox="0 0 1200 799" aria-hidden="true">
+            <g class="dim"><path pathLength="1" d="M95 772 H1000 M95 760 V784 M1000 760 V784"/><text x="547" y="758">TWIN-HULL ELECTRIC CATAMARAN</text></g>
+            <g class="call" style="--i:0"><path pathLength="1" d="M440 232 L330 140 H60"/><circle class="ring" cx="440" cy="232" r="10"/><circle cx="440" cy="232" r="10"/><text x="60" y="126">01 SHADED SUN DECK</text></g>
+            <g class="call" style="--i:1"><path pathLength="1" d="M770 398 L880 300 H1150"/><circle class="ring" cx="770" cy="398" r="10"/><circle cx="770" cy="398" r="10"/><text x="1150" y="286" text-anchor="end">02 WATER SLIDE</text></g>
+            <g class="call" style="--i:2"><path pathLength="1" d="M905 640 L960 690 H1150"/><circle class="ring" cx="905" cy="640" r="10"/><circle cx="905" cy="640" r="10"/><text x="1150" y="676" text-anchor="end">03 ELECTRIC DRIVE</text></g>
+            <g class="call" style="--i:3"><path pathLength="1" d="M330 580 L250 680 H60"/><circle class="ring" cx="330" cy="580" r="10"/><circle cx="330" cy="580" r="10"/><text x="60" y="666">04 TWIN HULLS</text></g>
+          </svg>
+        </div>
+        <ol class="boat-legend">
+          <li><b>01</b> Shaded sun deck</li><li><b>02</b> Water slide</li><li><b>03</b> Electric drive</li><li><b>04</b> Twin hulls</li>
+        </ol>
+      </figure>
+
+      <blockquote class="eco-quote">
+        <span class="stars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span>
+        <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them.&rdquo;</p>
+        <cite>Francis F, Tripadvisor</cite>
+      </blockquote>
+
+      <div class="spec-panel spec-compare">
+        <div class="panel-bar"><span>It's in our nature</span></div>
+        <h3>Kinder to the reef</h3>
+        <ul class="reef">
+          <li style="--i:0"><svg class="ri-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9.5a4 4 0 0 1 0 5"/></svg><div><strong>Quiet underwater</strong><span>No engine noise to scare the fish.</span></div></li>
+          <li style="--i:1"><svg class="ri-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M4 4l16 16"/></svg><div><strong>No fuel in the sea</strong><span>Nothing leaks onto the coral.</span></div></li>
+          <li style="--i:2"><svg class="ri-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h15a3 3 0 1 1-3 3"/><path d="M4 4l16 16"/></svg><div><strong>No exhaust fumes</strong><span>Clean air while you snorkel.</span></div></li>
+        </ul>
+        <div class="overall">
+          <p class="cmp-k">How reef-friendly</p>
+          <div class="o-row mg" style="--w:94%"><span>Miss Green</span><i></i></div>
+          <div class="o-row dsl" style="--w:30%"><span>Diesel boat</span><i></i></div>
+        </div>
+        <a class="btn eco-btn" href="the-boat/">More about the boat <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
     </div>
 
-    <div class="bsum">
-      <p class="sum-line" id="summary" aria-live="polite"></p>
-      <button type="button" class="btn btn-big" id="bookBtn" disabled>Pick a day first</button>
-      <p class="hint">You send us a WhatsApp message. We reply with a yes and how to pay. No payment now.</p>
+  </div>
+</section>
+
+<section class="cruise" id="cruise" aria-labelledby="cruiseTitle">
+  <div class="cruise-copy">
+    <h2 id="cruiseTitle">On a cruise ship?</h2>
+    <p class="cruise-lead">We pick a time that fits your ship. You are always back on time.</p>
+    <ul class="cruise-facts">
+      <li><span class="cf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span><div><strong>We meet close to the ship</strong><span>The parking lot next to Capriccio Restaurant. A 3 minute walk. Look for our sign.</span></div></li>
+      <li><span class="cf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><strong>Ship is late?</strong><span>We move your trip.</span></div></li>
+      <li><span class="cf-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v8M9.5 10.5c0-1 1-1.5 2.5-1.5s2.5.6 2.5 1.6c0 2.4-5 1.3-5 3.8 0 1 1 1.6 2.5 1.6s2.5-.5 2.5-1.5"/></svg></span><div><strong>Ship doesn't come?</strong><span>You get all your money back.</span></div></li>
+    </ul>
+    <div class="cruise-cta">
+      <a class="btn" href="#book" data-cruise>Book the cruise trip</a>
+      <a class="more-link" href="cruise-guests/">More for cruise guests <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
+  <figure class="cruise-pic">
+    <img src="../img/cruise-port.jpg" alt="Cruise ship docked at the pier in Kralendijk, Bonaire" loading="lazy">
+    <figcaption><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>3 min walk from the pier</figcaption>
+  </figure>
 </section>
 
 <section class="included" id="included" aria-labelledby="incTitle">
-  <h2 id="incTitle">On every trip</h2>
-  <ul class="inc-grid">
-    <li><img src="../img/ss-2-18.jpg" alt="" loading="lazy"><span>Mask and fins. We help you put them on.</span></li>
-    <li><img src="../img/ss-2-13.jpg" alt="" loading="lazy"><span>Snorkel with a guide over the reef.</span></li>
-    <li><img src="../img/ss-2-21.jpg" alt="" loading="lazy"><span>A water slide off the boat.</span></li>
-    <li><img src="../img/ss-2-4.jpg" alt="" loading="lazy"><span>Drinks on board. Soda, punch, beer, wine.</span></li>
-  </ul>
-  <p class="fine">Also on board: captain, crew, music and a clean toilet. Holiday guests pay the Bonaire nature fee (STINAPA) themselves. People who live on Bonaire don't.</p>
-</section>
-
-<section class="electric">
-  <figure class="electric-img">
-    <img src="../img/ss-2-22.jpg" alt="Drone view of Miss Green sailing along the Bonaire coast" loading="lazy">
-  </figure>
-  <div class="electric-copy">
-    <h2>A quiet boat. No smelly engine.</h2>
-    <p>Miss Green runs on batteries. You hear the water, the music and each other. The fish like it too.</p>
-    <blockquote>
-      <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them.&rdquo;</p>
-      <cite>Francis F, Tripadvisor</cite>
-    </blockquote>
+  <div class="inc-list">
+    <h2 id="incTitle">We've got you covered.</h2>
+    <p class="inc-sub">Your packing list for the day. We've already ticked off most of it.</p>
+    <div class="cl">
+      <div class="cl-group">
+        <h3>We bring</h3>
+        <ul class="cl-we">
+          <li style="--i:0"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Captain and crew</li>
+          <li style="--i:1"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Snorkel guide</li>
+          <li style="--i:2"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Mask and fins</li>
+          <li style="--i:3"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Water slide</li>
+          <li style="--i:4"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Floating mat</li>
+          <li style="--i:5"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Open bar</li>
+          <li style="--i:6"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Music on board</li>
+          <li style="--i:7"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>A clean toilet</li>
+        </ul>
+      </div>
+      <div class="cl-group cl-you">
+        <h3>You only bring</h3>
+        <ul>
+          <li><label><input type="checkbox" name="pack"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>A towel</label></li>
+          <li><label><input type="checkbox" name="pack"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>Sunscreen</label></li>
+          <li><label><input type="checkbox" name="pack"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>A smile</label></li>
+        </ul>
+        <p class="cl-done" id="clDone" aria-live="polite"></p>
+      </div>
+    </div>
+    <p class="inc-fee">Holiday guests pay the Bonaire nature fee (STINAPA). Residents don't.</p>
+    <a class="more-link" href="included/">More about what's included <span aria-hidden="true">&rarr;</span></a>
   </div>
-</section>
-
-<section class="food">
-  <div class="food-head">
-    <h2>Hungry? Add food.</h2>
-    <p>Pick a platter and tell us in your WhatsApp message.</p>
-  </div>
-  <div class="food-grid">
-    <figure><img src="../img/c-local-snacks.jpg" alt="Local snacks platter with pastechi and pika balls" loading="lazy"><figcaption>Local snacks</figcaption></figure>
-    <figure><img src="../img/c-bbq-platter.jpg" alt="BBQ platter" loading="lazy"><figcaption>BBQ</figcaption></figure>
-    <figure><img src="../img/c-fish-platter.jpg" alt="Fish platter" loading="lazy"><figcaption>Fish</figcaption></figure>
-    <figure><img src="../img/c-dutchplatter.jpg" alt="Dutch platter with cheese and sausage" loading="lazy"><figcaption>Dutch</figcaption></figure>
-    <figure><img src="../img/c-vega.jpg" alt="Vegetarian platter" loading="lazy"><figcaption>Vegetarian</figcaption></figure>
-    <figure><img src="../img/c-lunch-box.jpg" alt="Lunch box with wraps, salad and fruit" loading="lazy"><figcaption>Lunch box</figcaption></figure>
-  </div>
-</section>
-
-<section class="cruise" id="cruise">
-  <img class="cruise-img" src="../img/ss-2-3.jpg" alt="Guests swimming beside the catamaran" loading="lazy">
-  <div class="cruise-copy">
-    <h2>On a cruise ship?</h2>
-    <p>We pick a time that fits your ship. You are always back on time.</p>
-    <dl class="cruise-facts">
-      <div><dt>Where we meet</dt><dd>The parking lot next to Capriccio Restaurant. A 3 minute walk from the ship. Look for our sign.</dd></div>
-      <div><dt>Ship is late?</dt><dd>We move your trip.</dd></div>
-      <div><dt>Ship doesn't come?</dt><dd>You get all your money back.</dd></div>
-    </dl>
-    <a class="btn" href="#book" data-cruise>Book the cruise trip</a>
-  </div>
-</section>
-
-<section class="reviews" aria-labelledby="revTitle">
-  <h2 id="revTitle">What guests say</h2>
-  <div class="rev-grid">
-    <blockquote class="rev-big">
-      <p>&ldquo;On the way back we were accompanied by a small pod of dolphins and rum punch. What more could you ask for?&rdquo;</p>
-      <cite>Chris V, February 2025</cite>
-    </blockquote>
-    <blockquote>
-      <p>&ldquo;It was my first time snorkeling. They had me feeling well equipped and it was a blast.&rdquo;</p>
-      <cite>Vivian G, January 2025</cite>
-    </blockquote>
-    <blockquote>
-      <p>&ldquo;The boat was spotless and very comfortable.&rdquo;</p>
-      <cite>Christian W, February 2025</cite>
-    </blockquote>
+  <div class="inc-photos">
+    <img class="p1" src="../img/ss-2-18.jpg" alt="A crew member gets the snorkel gear ready on board" loading="lazy">
+    <img class="p2" src="../img/ss-2-21.jpg" alt="A guest going down the water slide" loading="lazy">
+    <img class="p3" src="../img/ss-homep1-1.jpg" alt="Guests relaxing on the floating mat" loading="lazy">
   </div>
 </section>
 
 <section class="faq" id="faq">
-  <h2>Questions</h2>
+  <h2>Most asked questions</h2>
   <div class="faq-list">
     <details>
       <summary>Where does the boat leave from?</summary>
@@ -206,29 +481,72 @@
       <summary>What if we can't come?</summary>
       <p>Cancel less than 30 days before: you pay 25%. Less than 3 days before: 50%. Less than 1 day before, or not showing up: the full price.</p>
     </details>
+    <a class="more-link" href="faq/">All questions <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <img class="foot-img" src="../img/ss-2-0.jpg" alt="" loading="lazy">
+  <img class="foot-img" src="../img/ss-2-9.jpg" alt="" loading="lazy">
   <div class="foot-inner">
     <h2>Ready? Pick your day.</h2>
     <div class="foot-cta">
       <a class="btn btn-big" href="#book">Book a trip</a>
       <a class="btn btn-ghost" href="https://wa.me/5997016692">Ask a question on WhatsApp</a>
     </div>
-    <div class="foot-meta">
-      <p>We reply Monday to Friday, 8:00 to 17:00.</p>
-      <p><a href="https://www.instagram.com/missgreensustainabletrips/">Instagram</a> <a href="https://www.facebook.com/profile.php?id=61564850934587">Facebook</a> <a href="https://www.tripadvisor.com/Search?q=Miss%20Green%20Bonaire">Tripadvisor</a></p>
-      <p class="mock">Concept v2 by Salty Code Studio. Not the live site.</p>
-    </div>
   </div>
 </footer>
 
+<footer class="site-foot">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <a class="sf-logo" href="./"><img class="wm" src="../img/wordmark-white.png" alt="Miss Green" width="800" height="234"></a>
+      <p class="sf-tag">Bonaire's first fully electric catamaran.</p>
+      <a class="sf-wa" href="https://wa.me/5997016692"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M9 8.5c0 3.3 3.2 6.5 6.5 6.5l1-1.6-2-1-1 .8c-1-.5-2-1.5-2.6-2.6l.8-1-1-2Z"/></svg>Chat on WhatsApp</a>
+    </div>
+    <nav class="sf-col" aria-label="Footer">
+      <h3>Explore</h3>
+      <a href="included/">What's included</a>
+      <a href="the-boat/">The boat</a>
+      <a href="reviews/">Reviews</a>
+      <a href="cruise-guests/">Cruise guests</a>
+      <a href="faq/">Questions</a>
+      <a href="./#book">Book a trip</a>
+    </nav>
+    <div class="sf-col">
+      <h3>Contact</h3>
+      <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>Marina near Plaza Resort, Kralendijk, Bonaire</p>
+      <a href="tel:+5997016692"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+599 701 6692</a>
+      <a href="mailto:info@missgreenbonaire.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>info@missgreenbonaire.com</a>
+      <p><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Monday to Friday, 8:00 to 17:00</p>
+    </div>
+    <div class="sf-col">
+      <h3>Follow us</h3>
+      <div class="sf-social">
+        <a href="https://www.instagram.com/missgreensustainabletrips/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61564850934587" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M13.5 20.5v-7h2.3l.4-2.8h-2.7V9c0-.8.3-1.4 1.4-1.4h1.4V5.2c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.1H8.6v2.8h2.3v7"/></svg></a>
+        <a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html" aria-label="Tripadvisor"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="13" r="3.5"/><circle cx="16.5" cy="13" r="3.5"/><circle cx="7.5" cy="13" r=".8"/><circle cx="16.5" cy="13" r=".8"/><path d="M4 9.5C6 7.5 9 6.5 12 6.5s6 1 8 3M12 13.5l-1 2.5h2z"/></svg></a>
+      </div>
+      <a class="sf-ig" href="https://www.instagram.com/missgreensustainabletrips/" aria-label="Instagram: 302 followers. Follow Miss Green">
+        <span class="ig-handle">@missgreensustainabletrips</span>
+        <span class="ig-flip">
+          <span class="ig-label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20.5c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"/></svg>Followers</span>
+          <span class="ig-digits" data-ig-count="302" aria-hidden="true"><span class="fd"><b>3</b></span><span class="fd"><b>0</b></span><span class="fd"><b>2</b></span></span>
+        </span>
+        <span class="ig-follow"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg>Follow</span>
+      </a>
+    </div>
+  </div>
+  <div class="sf-bar">
+    <p>&copy; 2026 Miss Green Bonaire. All rights reserved.</p>
+    <p class="mock">Concept v2 by Salty Code Studio. Not the live site.</p>
+  </div>
+</footer>
+
+
 <a class="wa-float btn" href="#book">Book a trip</a>
 
-<script src="site.js"></script>
+<script src="site.js?v=20261102225753"></script>
 </body>
 </html>

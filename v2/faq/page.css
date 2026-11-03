@@ -1,0 +1,81 @@
+/* Questions page: a calm, grouped list. Sticky topic list on the left (desktop), pill row on mobile. */
+
+.qa-hero.hero-page { min-height: clamp(380px, 54svh, 560px); }
+.qa-hero .hero-img { object-position: 50% 60%; }
+
+.qa {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  padding-top: clamp(48px, 7vw, 96px);
+  padding-bottom: clamp(48px, 6vw, 80px);
+}
+
+/* Side list */
+.qa-side { position: sticky; top: 104px; display: grid; gap: 18px; }
+.qa-side-title { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.qa-jump { display: grid; gap: 2px; border-left: 2px solid var(--line); }
+.qa-jump a {
+  margin-left: -2px; padding: 8px 0 8px 16px;
+  border-left: 2px solid transparent;
+  color: var(--ink-2); font-weight: 600; text-decoration: none;
+  transition: color .2s, border-color .2s;
+}
+.qa-jump a:hover { color: var(--ink); }
+.qa-jump a.on { color: var(--deep); border-left-color: var(--teal); }
+.qa-side-help { font-size: 15px; font-weight: 600; color: var(--deep); text-decoration: none; }
+.qa-side-help:hover { text-decoration: underline; }
+
+/* Groups */
+.qa-groups { display: grid; gap: clamp(48px, 6vw, 80px); max-width: 760px; }
+.qa-group { scroll-margin-top: 100px; }
+.qa-group h2 { font-size: clamp(26px, 2.6vw, 34px); margin-bottom: 14px; }
+.qa .faq-list summary { padding-top: 18px; padding-bottom: 18px; font-size: 18px; }
+.qa .faq-list summary:hover { color: var(--deep); }
+.qa .faq-list summary::after { color: var(--teal); }
+.qa .faq-list details p { font-size: 17px; }
+
+/* Help card */
+.qa-help { padding-top: 0; }
+.qa-help-card {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 24px 40px;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 24px;
+  background: var(--sky, #dff4f2);
+}
+.qa-help-copy h2 { font-size: clamp(28px, 3vw, 40px); }
+.qa-help-copy p { margin-top: 10px; color: var(--ink-2); font-size: 18px; max-width: 40ch; }
+.qa-help-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.qa-wa { gap: 10px; background: var(--deep); color: #fff; }
+.qa-wa:hover { background: var(--teal); }
+.qa-help-cta .btn-line { background: #fff; }
+.qa-help-cta .btn-line:hover { background: var(--bg); }
+.qa-cruise-link { margin-top: 20px; color: var(--ink-2); }
+.qa-cruise-link a { color: var(--deep); font-weight: 600; }
+
+/* Mobile: topic list becomes a row of pills above the questions */
+@media (max-width: 860px) {
+  .qa { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .qa-side { position: static; }
+  .qa-side-help { display: none; }
+  .qa-jump { display: flex; flex-wrap: wrap; gap: 8px; border-left: 0; }
+  .qa-jump a { margin: 0; padding: 9px 16px; border: 0; border-radius: 999px; background: var(--bg-2); color: var(--ink); font-size: 15px; }
+  .qa-jump a.on { background: var(--bg-2); color: var(--ink); }
+}
+@media (max-width: 560px) {
+  .qa-help-cta, .qa-help-cta .btn { width: 100%; }
+  .qa .faq-list summary { font-size: 17px; }
+}
+
+/* Keep the header text readable over the bright sky photo */
+.qa-hero::after { background: linear-gradient(90deg, rgb(4 22 26 / .5) 0%, rgb(4 22 26 / .15) 55%, transparent 80%), linear-gradient(180deg, rgb(4 22 26 / .3) 0%, rgb(4 22 26 / .1) 30%, rgb(4 22 26 / .5) 100%); }
+@media (max-width: 767px) {
+  .qa-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .35) 0%, rgb(4 22 26 / .45) 45%, rgb(4 22 26 / .62) 100%); }
+}
+
+/* The question list is very tall, so the shared scroll reveal would leave it blank on first view. Show it at once. */
+.qa-groups.reveal, .qa-side.reveal { opacity: 1; transform: none; }
+/* Room between the questions and the help block */
+.qa-help { padding-top: clamp(56px, 7vw, 96px); }

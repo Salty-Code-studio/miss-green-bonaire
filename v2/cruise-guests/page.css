@@ -1,0 +1,81 @@
+/* Cruise guests page: calm path from ship to boat and back. */
+.cg-hero .hero-img { object-position: 50% 55%; }
+
+.cg-day h2, .cg-pack h2, .cg-boat h2 { font-size: clamp(30px, 3.6vw, 46px); }
+.cg-day-head p { margin-top: 12px; color: var(--ink-2); font-size: 18px; }
+.cg-day-grid { display: grid; gap: clamp(32px, 5vw, 72px); margin-top: clamp(32px, 4vw, 56px); align-items: start; }
+.cg-port { margin: 0; max-width: 740px; }
+.cg-port img { width: 100%; height: auto; border-radius: var(--r); }
+.cg-port figcaption { margin-top: 10px; font-size: 15px; color: var(--ink-2); }
+
+.cg-path { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.cg-path li { position: relative; counter-increment: step; padding: 0 0 34px 64px; }
+.cg-path li:last-child { padding-bottom: 0; }
+.cg-path li::before {
+  content: counter(step); position: absolute; left: 0; top: -6px;
+  display: grid; place-items: center; width: 42px; height: 42px; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--line); color: var(--deep);
+  font-weight: 700; font-size: 17px;
+}
+.cg-path li::after { content: ""; position: absolute; left: 20.5px; top: 42px; bottom: 2px; width: 1px; background: var(--line); }
+.cg-path li:last-child::after { display: none; }
+.cg-path li:last-child::before { background: var(--deep); border-color: var(--deep); color: #fff; }
+.cg-path h3 { font-size: 21px; letter-spacing: -.01em; }
+.cg-path p { margin-top: 6px; color: var(--ink-2); max-width: 46ch; }
+
+.cg-promise { padding-top: 0; padding-bottom: 0; }
+.cg-promise-inner { background: var(--sky); border-radius: var(--r); padding: clamp(32px, 5vw, 64px); text-align: center; }
+.cg-promise h2 { font-size: clamp(28px, 3.4vw, 44px); }
+.cg-promise ul { list-style: none; margin: 22px auto 0; padding: 0; display: grid; gap: 10px; font-size: 18px; max-width: 48ch; }
+.cg-promise strong { font-weight: 650; }
+
+.cg-boat { display: grid; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.cg-snacks { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); }
+.cg-list { list-style: none; margin: 22px 0 0; padding: 0; }
+.cg-list li { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 18px; }
+.cg-list li::before { content: ""; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--teal) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%273.2%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m5 12.5 4.5 4.5L19 7.5%27/%3E%3C/svg%3E") center / 15px no-repeat; }
+.cg-list li:first-child { border-top: 1px solid var(--line); }
+.cg-note { margin-top: 18px; color: var(--ink-2); font-size: 15px; }
+
+.cg-pack { padding-top: 0; }
+.cg-pack-cols { display: grid; gap: 28px; margin-top: 28px; }
+.cg-pack h3 { font-size: 18px; color: var(--deep); }
+.cg-pack-cols > div { padding: clamp(22px, 2.6vw, 32px); border-radius: var(--r); }
+.pk-you { background: #fff6d6; }
+.pk-we { background: var(--bg-2); }
+.cg-pack ul { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 12px; }
+.cg-pack li { display: flex; align-items: center; gap: 14px; font-size: 17px; line-height: 1.35; }
+.pk-ico { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px -6px rgb(10 60 70 / .25); }
+.pk-ico svg { width: 24px; height: 24px; fill: none; stroke: var(--deep, var(--teal)); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.pk-you .pk-ico svg { stroke: #b07a00; }
+
+.cg-cta { text-align: center; padding-top: 0; }
+.cg-cta h2 { font-size: clamp(30px, 3.6vw, 46px); }
+.cg-cta p { margin: 14px auto 0; max-width: 44ch; color: var(--ink-2); font-size: 18px; }
+.cg-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+
+@media (min-width: 900px) {
+  .cg-day-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .cg-port { position: sticky; top: 100px; }
+  .cg-boat { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cg-pack-cols { grid-template-columns: 1fr 1fr; max-width: 900px; align-items: start; }
+}
+@media (max-width: 520px) {
+  .cg-cta-row .btn { width: 100%; }
+  .cg-path li { padding-left: 58px; }
+}
+@media (max-width: 767px) {
+  .cg-hero .hero-img { object-position: 72% 30%; }
+  .cg-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 25%, rgb(4 22 26 / .35) 45%, rgb(4 22 26 / .6) 100%); }
+}
+
+/* What to bring: our side is the big card, yours is the small one. */
+.cg-pack-cols { grid-template-columns: 1fr; }
+.pk-we h3 span { display: block; margin-top: 2px; font-size: 15px; font-weight: 500; color: var(--ink-2); }
+.pk-we ul { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px 20px; }
+.pk-you ul { gap: 10px; }
+.pk-you .pk-ico { width: 38px; height: 38px; }
+.pk-you .pk-ico svg { width: 20px; height: 20px; }
+.pk-you li { font-size: 16px; }
+.pk-small { margin: 14px 0 0; font-size: 14px; color: var(--ink-2); }
+@media (min-width: 768px) { .cg-pack-cols { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); max-width: none; } }
