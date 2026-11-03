@@ -121,11 +121,13 @@ function render() {
   // Step 1
   document.querySelectorAll(".opt input").forEach(r => {
     const el = r.closest(".opt").querySelector("[data-price]");
-    if (el) el.textContent = usd(PRICES[r.value][i]);
+    if (!el) return;
+    const total = PRICES[r.value][i], n = BRACKETS[i];
+    el.innerHTML = `${usd(total)}<small>Only ${usd(Math.round(total / n))} each <span>for ${n} people</span></small>`;
   });
   $("tripNote").textContent = cruise
     ? "We send the cruise price for your ship's date."
-    : g <= 10 ? "One price for up to 10 people" : `Prices shown for ${g} people. You can change this in the next step.`;
+    : g <= 10 ? "One price for the whole boat, up to 10 people" : `Prices shown for ${g} people. You can change this in the next step.`;
 
   // Step 2
   wiz.classList.toggle("is-custom", custom);

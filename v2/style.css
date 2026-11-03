@@ -940,3 +940,8 @@ section.eco::before { opacity: .45; }
 /* Centre the word (not the bolt tail) in the bar */
 .brand .wm { transform: translateY(19%); }
 .book-side > p { max-width: none; }
+
+/* Per-person line under the boat price */
+.opt-price small { display: block; margin-top: 4px; font-size: 14px; font-weight: 600; letter-spacing: 0; color: var(--deep); }
+.opt:has(input:checked) .opt-price small { color: inherit; opacity: .85; }
+@media (max-width: 767px) { .opt-price { text-align: right; } .opt-price small { font-size: 13px; } .opt-price small span { display: block; } }
