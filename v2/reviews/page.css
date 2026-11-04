@@ -64,3 +64,25 @@
 .rv-hero::after { background: linear-gradient(90deg, rgb(4 22 26 / .55) 0%, rgb(4 22 26 / .25) 40%, transparent 65%), linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 30%); }
 .rv-hero .crumbs { text-shadow: 0 1px 8px rgb(4 22 26 / .6); }
 .rv-hero .hero-img { object-position: 50% 30%; }
+
+/* Under the wall: all reviews link, then a calm "write a review" card */
+.rv-wall-foot { display: flex; justify-content: center; margin-top: clamp(12px, 2vw, 24px); }
+.rv-wall-foot .btn-line { min-height: 56px; padding: 0 26px; background: #fff; }
+.rv-write { max-width: 640px; margin: clamp(40px, 5vw, 64px) auto 0; padding: clamp(32px, 4vw, 48px) clamp(22px, 4vw, 48px); border-radius: 24px; background: #fff; box-shadow: 0 1px 2px rgb(0 60 70 / .05), 0 24px 50px -30px rgb(0 117 111 / .45); display: grid; justify-items: center; text-align: center; gap: 12px; }
+.rv-write h2 { font-size: clamp(28px, 3vw, 38px); }
+.rv-write p { font-size: 17px; color: var(--ink-2); max-width: 34ch; }
+.rv-rate { display: flex; gap: 6px; margin: 6px 0 10px; }
+.rv-rate a { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; color: var(--line); transition: transform .2s var(--ease); }
+.rv-rate .star { width: 38px; height: 38px; fill: #d9e4e3; transition: fill .15s; }
+.rv-rate:hover .star, .rv-rate:focus-within .star { fill: var(--bolt); }
+.rv-rate a:hover ~ a .star, .rv-rate a:focus-visible ~ a .star { fill: #d9e4e3; }
+.rv-rate a:hover { transform: translateY(-2px); }
+.rv-rate a:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.rv-write .btn { background: var(--deep); color: #fff; box-shadow: none; }
+.rv-write .btn:hover { background: var(--teal); }
+.rv-write small { font-size: 14px; color: var(--ink-2); }
+@media (max-width: 767px) {
+  .rv-rate a { width: 46px; height: 46px; }
+  .rv-rate .star { width: 34px; height: 34px; }
+  .rv-write .btn { width: 100%; white-space: normal; }
+}

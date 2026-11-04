@@ -1,11 +1,11 @@
 /* Cruise guests page: calm path from ship to boat and back. */
-.cg-hero .hero-img { object-position: 50% 55%; }
+.cg-hero .hero-img { object-position: 50% 50%; }
 
 .cg-day h2, .cg-pack h2, .cg-boat h2 { font-size: clamp(30px, 3.6vw, 46px); }
 .cg-day-head p { margin-top: 12px; color: var(--ink-2); font-size: 18px; }
 .cg-day-grid { display: grid; gap: clamp(32px, 5vw, 72px); margin-top: clamp(32px, 4vw, 56px); align-items: start; }
 .cg-port { margin: 0; max-width: 740px; }
-.cg-port img { width: 100%; height: auto; border-radius: var(--r); }
+.cg-port img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r); }
 .cg-port figcaption { margin-top: 10px; font-size: 15px; color: var(--ink-2); }
 
 .cg-path { list-style: none; margin: 0; padding: 0; counter-reset: step; }
@@ -65,8 +65,8 @@
   .cg-path li { padding-left: 58px; }
 }
 @media (max-width: 767px) {
-  .cg-hero .hero-img { object-position: 72% 30%; }
-  .cg-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 25%, rgb(4 22 26 / .35) 45%, rgb(4 22 26 / .6) 100%); }
+  .cg-hero .hero-img { object-position: 70% 50%; }
+  .cg-hero::after { background: linear-gradient(180deg, rgb(4 22 26 / .55) 0%, rgb(4 22 26 / .45) 50%, rgb(4 22 26 / .2) 100%); }
 }
 
 /* What to bring: our side is the big card, yours is the small one. */
@@ -79,3 +79,8 @@
 .pk-you li { font-size: 16px; }
 .pk-small { margin: 14px 0 0; font-size: 14px; color: var(--ink-2); }
 @media (min-width: 768px) { .cg-pack-cols { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); max-width: none; } }
+
+/* Cruise ship header: shade the left so the text reads over the busy town */
+@media (min-width: 768px) {
+  .cg-hero::after { background: linear-gradient(90deg, rgb(4 22 26 / .72) 0%, rgb(4 22 26 / .45) 38%, transparent 62%), linear-gradient(180deg, rgb(4 22 26 / .25) 0%, transparent 22%); }
+}
