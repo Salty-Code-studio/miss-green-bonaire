@@ -86,3 +86,7 @@
   .rv-rate .star { width: 34px; height: 34px; }
   .rv-write .btn { width: 100%; white-space: normal; }
 }
+
+/* Same soft sea-to-sand gradient and sun glow as the home page reviews */
+.rv-wall { position: relative; isolation: isolate; overflow: hidden; background: linear-gradient(180deg, #fff 0%, #e3f2f1 30%, #fdf4e1 85%, #fff 100%); }
+.rv-wall::before { content: ""; position: absolute; right: 5%; top: 40%; width: 60%; height: 45%; z-index: -1; background: radial-gradient(closest-side, rgb(248 176 24 / .4), transparent); filter: blur(30px); pointer-events: none; }

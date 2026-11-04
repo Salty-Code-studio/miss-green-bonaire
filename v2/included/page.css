@@ -98,3 +98,45 @@
 }
 .bring-list small { font-weight: 400; }
 .inc-know { padding-top: clamp(72px, 10vw, 128px); }
+
+/* A small icon tile in front of every included item */
+.inc-items > div { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; }
+.inc-items .inc-ico { grid-row: span 2; width: 48px; height: 48px; padding: 11px; border-radius: 14px; background: color-mix(in srgb, #00948c 10%, #fff); fill: none; stroke: #00948c; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.inc-items dt, .inc-items dd { grid-column: 2; }
+.bring-plus { margin-top: 16px; text-align: center; font-size: 15px; font-weight: 600; color: var(--deep); }
+
+/* "You bring" tiles in the three brand colours */
+.inc-bring .bring-list { margin-top: 18px; }
+.inc-bring .bring-list li { transition: background .3s, color .3s; }
+/* Dark */
+.inc-bring[data-tiles="dark"] .bring-list li { background: #062029; box-shadow: 0 18px 40px -24px rgb(6 32 41 / .7); }
+.inc-bring[data-tiles="dark"] .bring-list b { color: #fff; }
+.inc-bring[data-tiles="dark"] .bring-list small { color: rgb(232 246 245 / .75); }
+.inc-bring[data-tiles="dark"] .bring-ico { background: rgb(50 169 164 / .2); }
+.inc-bring[data-tiles="dark"] .bring-ico svg { stroke: #32a9a4; }
+/* Teal (reversed) */
+.inc-bring[data-tiles="reversed"] .bring-list li { background: #00948c; box-shadow: 0 18px 40px -24px rgb(0 117 111 / .7); }
+.inc-bring[data-tiles="reversed"] .bring-list b { color: #fff; }
+.inc-bring[data-tiles="reversed"] .bring-list small { color: rgb(255 255 255 / .85); }
+.inc-bring[data-tiles="reversed"] .bring-ico { background: #fff; }
+.inc-bring[data-tiles="reversed"] .bring-ico svg { stroke: #00948c; }
+/* Three colours: teal, sun yellow, deep navy */
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(1) { background: #00948c; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(2) { background: #f8b018; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(3) { background: #062029; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(odd) b { color: #fff; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(odd) small { color: rgb(255 255 255 / .82); }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(2) b, .inc-bring[data-tiles="three"] .bring-list li:nth-child(2) small { color: #1b1606; }
+.inc-bring[data-tiles="three"] .bring-ico { background: rgb(255 255 255 / .92); }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(1) .bring-ico svg { stroke: #00948c; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(2) .bring-ico svg { stroke: #b07400; }
+.inc-bring[data-tiles="three"] .bring-list li:nth-child(3) .bring-ico svg { stroke: #062029; }
+@media (max-width: 767px) { .foot-cta .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; } }
+
+/* Nature fee reminder band */
+.fee-band { max-width: calc(var(--max) - 2 * var(--pad)); margin: clamp(48px, 6vw, 80px) auto 0; padding: clamp(22px, 3vw, 32px) clamp(22px, 3vw, 36px); border-radius: 24px; background: #00948c; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 18px 32px; }
+.fee-band small { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--bolt); }
+.fee-band h2 { margin-top: 4px; font-size: clamp(24px, 2.4vw, 32px); color: #fff; }
+.fee-band p { margin-top: 6px; font-size: 16px; color: rgb(255 255 255 / .9); max-width: 52ch; }
+.fee-band .btn { flex: none; background: #fff; color: var(--ink); box-shadow: none; }
+@media (max-width: 767px) { .fee-band { flex-direction: column; align-items: flex-start; margin-left: var(--pad); margin-right: var(--pad); } .fee-band .btn { width: 100%; justify-content: center; } }

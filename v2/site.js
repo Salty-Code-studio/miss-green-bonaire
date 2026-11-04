@@ -400,3 +400,101 @@ if ($("revRail")) {
   }, { threshold: .6 }).observe(box);
 })();
 
+
+// Booking style B: everything on one screen (people, trip, day), then WhatsApp. Toggled next to the step-by-step wizard.
+(() => {
+  const qb = $("qb"), book = $("book");
+  if (!qb || !book) return;
+  const q = { guests: 6, cruise: false, date: null, month: new Date(first.getFullYear(), first.getMonth(), 1) };
+  const qTour = () => qb.querySelector("input[name=qtour]:checked").value;
+  const qBracket = () => BRACKETS.findIndex(max => q.guests <= max);
+  const longDate = d => d.toLocaleDateString("en-US", { weekday: "long", day: "numeric", month: "long" });
+
+  // The toggle: show one booking style at a time.
+  const setMode = mode => {
+    book.classList.toggle("mode-one", mode === "one");
+    const sub = book.querySelector(".book-side > p");
+    if (sub) sub.textContent = mode === "one" ? "People, trip and day on one screen. Then send it on WhatsApp." : "Pick a trip. Pick a day. Tell us who you are. That's it.";
+    qb.hidden = mode !== "one";
+    $("wiz").hidden = mode === "one";
+    book.querySelectorAll(".book-mode button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+    try { localStorage.setItem("mgBookMode", mode); } catch (e) {}
+  };
+  book.querySelectorAll(".book-mode button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+
+  qb.querySelectorAll("[data-q]").forEach(b => b.addEventListener("click", () => {
+    q.guests = Math.min(MAX, Math.max(1, q.guests + +b.dataset.q)); draw();
+  }));
+  $("qCruise").addEventListener("change", e => { q.cruise = e.target.checked; draw(); });
+  qb.querySelectorAll("input[name=qtour]").forEach(r => r.addEventListener("change", draw));
+  $("qPrev").addEventListener("click", () => { q.month.setMonth(q.month.getMonth() - 1); cal(); });
+  $("qNext").addEventListener("click", () => { q.month.setMonth(q.month.getMonth() + 1); cal(); });
+
+  function cal() {
+    const m = q.month, grid = $("qGrid");
+    $("qMonth").textContent = m.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    $("qPrev").disabled = m <= new Date(first.getFullYear(), first.getMonth(), 1);
+    $("qNext").disabled = (m.getFullYear() - today.getFullYear()) * 12 + m.getMonth() - today.getMonth() >= 12;
+    grid.replaceChildren();
+    for (let i = 0; i < (m.getDay() + 6) % 7; i++) grid.append(document.createElement("span"));
+    const days = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
+    for (let n = 1; n <= days; n++) {
+      const d = new Date(m.getFullYear(), m.getMonth(), n), b = document.createElement("button");
+      b.type = "button"; b.textContent = n; b.setAttribute("aria-label", longDate(d));
+      b.disabled = d < first; b.setAttribute("aria-pressed", String(+d === +q.date));
+      b.addEventListener("click", () => { q.date = d; cal(); draw(); });
+      grid.append(b);
+    }
+  }
+
+  function draw() {
+    const g = q.guests, i = qBracket();
+    $("qGuests").value = g;
+    qb.querySelector("[data-q='-1']").disabled = g <= 1;
+    qb.querySelector("[data-q='1']").disabled = g >= MAX;
+    $("qGuestsHint").textContent = g >= MAX ? "That's the most we can take. Bigger group? Ask us on WhatsApp." : "Count everyone, kids too.";
+    qb.querySelectorAll(".qb-trip input").forEach(r => {
+      const p = PRICES[r.value][i], card = r.closest(".qb-trip");
+      card.querySelector("[data-qprice]").textContent = usd(p);
+      card.querySelector("[data-qeach]").textContent = `${usd(Math.round(p / BRACKETS[i]))} each for ${BRACKETS[i]}`;
+    });
+    $("qTrips").hidden = q.cruise;
+    $("qCruiseTrip").hidden = !q.cruise;
+    $("qPriceHint").textContent = q.cruise ? "We send you the cruise price on WhatsApp." : `One price for the whole boat, up to ${BRACKETS[i]} people.`;
+    const t = TOURS[qTour()];
+    const what = q.cruise ? "Cruise Ship Tour" : `${t.name}, ${usd(PRICES[qTour()][i])}`;
+    $("qSummary").innerHTML = `<b>${people(g)}</b> · <b>${what}</b> · <b>${q.date ? longDate(q.date) : "no day yet"}</b>`;
+    $("qBook").disabled = !q.date;
+    $("qBook").textContent = q.date ? "Book this trip" : "Pick a day first";
+  }
+
+  $("qBook").addEventListener("click", () => {
+    const g = q.guests, i = qBracket();
+    const lines = q.cruise
+      ? ["Hi Miss Green! I'd like to book:", "Trip: Cruise Ship Tour", `Day: ${longDate(q.date)}`, `People: ${g}`, "Our ship: "]
+      : ["Hi Miss Green! I'd like to book:", `Trip: ${TOURS[qTour()].name} (${TOURS[qTour()].hours})`, `Day: ${longDate(q.date)}`, `People: ${g}`, `Price on your site: ${usd(PRICES[qTour()][i])} for the boat`, "Is this day free?"];
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+  });
+
+  cal(); draw();
+  let saved = null; try { saved = localStorage.getItem("mgBookMode"); } catch (e) {}
+  setMode(saved === "one" ? "one" : "steps");
+})();
+
+// The boat page: keep the grid inside the stretched hero wave the same size as the grid below, and lined up with it.
+(() => {
+  const pat = document.getElementById("bpGrid");
+  if (!pat) return;
+  const svg = pat.ownerSVGElement, cell = 32;
+  const fit = () => {
+    const r = svg.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    const sx = 1440 / r.width, sy = 100 / r.height, w = cell * sx, h = cell * sy;
+    pat.setAttribute("width", w); pat.setAttribute("height", h);
+    pat.setAttribute("y", (100 % h).toFixed(3));
+    pat.querySelector(".g-v").setAttribute("width", sx);
+    pat.querySelector(".g-h").setAttribute("height", sy);
+  };
+  fit();
+  addEventListener("resize", fit);
+})();

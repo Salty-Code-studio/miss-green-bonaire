@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Urbanist:wght@500..800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="../img/ss-2-0.jpg">
-<link rel="stylesheet" href="style.css?v=20261104024703">
+<link rel="stylesheet" href="style.css?v=20261104042125">
 <script>{ const t = new URLSearchParams(location.search).get("theme"); document.documentElement.dataset.theme = t || "lagoon"; }</script>
 </head>
 <body>
@@ -66,6 +66,10 @@
   <div class="book-side">
     <h2 id="bookTitle">Book in 3 easy steps</h2>
     <p>Pick a trip. Pick a day. Tell us who you are. That's it.</p>
+    <div class="book-mode" role="group" aria-label="Booking style">
+      <button type="button" data-mode="steps" aria-pressed="true">Step by step</button>
+      <button type="button" data-mode="one" aria-pressed="false">All on one screen</button>
+    </div>
     <ol class="book-list">
       <li><button type="button" data-jump="1"><span>1</span>Choose your trip</button></li>
       <li><button type="button" data-jump="2"><span>2</span><b id="jump2">Pick a day and time</b></button></li>
@@ -73,6 +77,49 @@
     </ol>
   </div>
 
+  <div class="qb" id="qb" hidden>
+    <div class="qb-col">
+      <h3><span class="num">1</span> How many people?</h3>
+      <div class="qb-count">
+        <button type="button" class="step" data-q="-1" aria-label="One person less">&minus;</button>
+        <output id="qGuests" aria-live="polite">6</output>
+        <button type="button" class="step" data-q="1" aria-label="One person more">+</button>
+      </div>
+      <p class="qb-hint" id="qGuestsHint">Count everyone, kids too.</p>
+      <label class="qb-switch">
+        <input type="checkbox" id="qCruise">
+        <span class="qb-switch-ui" aria-hidden="true"></span>
+        <span>We come from a cruise ship</span>
+      </label>
+    </div>
+    <fieldset class="qb-col">
+      <legend><h3><span class="num">2</span> Which trip?</h3></legend>
+      <div class="qb-trips" id="qTrips">
+        <label class="qb-trip"><input type="radio" name="qtour" value="mini"><img src="../img/ss-2-22.jpg" alt="" loading="lazy"><span class="qb-tt"><strong>Mini Escape</strong><span>3 hours</span></span><span class="qb-tp"><b data-qprice></b><small data-qeach></small></span></label>
+        <label class="qb-trip"><input type="radio" name="qtour" value="ocean" checked><img src="../img/ss-2-1.jpg" alt="" loading="lazy"><span class="qb-tt"><strong>Ocean Adventure <em>Most popular</em></strong><span>4 hours</span></span><span class="qb-tp"><b data-qprice></b><small data-qeach></small></span></label>
+        <label class="qb-trip"><input type="radio" name="qtour" value="full"><img src="../img/ss-2-12.jpg" alt="" loading="lazy"><span class="qb-tt"><strong>Full Experience</strong><span>5 hours</span></span><span class="qb-tp"><b data-qprice></b><small data-qeach></small></span></label>
+      </div>
+      <div class="qb-trip qb-cruise" id="qCruiseTrip" hidden><img src="../img/ss-2-3.jpg" alt=""><span class="qb-tt"><strong>Cruise Ship Tour</strong><span>4 hours, planned around your ship</span></span></div>
+      <p class="qb-hint" id="qPriceHint"></p>
+    </fieldset>
+    <div class="qb-col">
+      <h3><span class="num">3</span> Which day?</h3>
+      <div class="cal qb-cal">
+        <div class="cal-head">
+          <button type="button" class="cal-nav" id="qPrev" aria-label="Previous month">&lsaquo;</button>
+          <strong id="qMonth" aria-live="polite"></strong>
+          <button type="button" class="cal-nav" id="qNext" aria-label="Next month">&rsaquo;</button>
+        </div>
+        <div class="cal-days" aria-hidden="true"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+        <div class="cal-grid" id="qGrid"></div>
+      </div>
+    </div>
+    <div class="qb-sum">
+      <p id="qSummary" aria-live="polite"></p>
+      <button type="button" class="btn btn-big" id="qBook" disabled>Pick a day first</button>
+      <p class="qb-hint">You send us a WhatsApp message. We reply with a yes and how to pay. No payment now.</p>
+    </div>
+  </div>
   <div class="wiz" id="wiz">
     <div class="wiz-top">
       <button type="button" class="wiz-back" id="wizBack" hidden><span aria-hidden="true">&lsaquo;</span> Back</button>
@@ -128,6 +175,7 @@
           </label>
         </div>
         <p class="wiz-note" id="tripNote"></p>
+        <p class="grp-strip"><b aria-hidden="true">%</b><span><strong>Bigger group, bigger discount.</strong> 10 people pay $80 each. 50 people pay about $64 each.</span></p>
         <button type="button" class="custom" id="customBtn">
           <svg class="ico ico-lg"><use href="#i-map"/></svg>
           <span class="custom-text"><small>Want a different kind of day?</small><strong>Custom trip</strong><span>Your hours, your food, your extras</span></span>
@@ -446,6 +494,14 @@
           <li><label><input type="checkbox" name="pack"><span class="tick"><svg class="ico"><use href="#i-check"/></svg></span>A smile</label></li>
         </ul>
         <p class="cl-done" id="clDone" aria-live="polite"></p>
+        <div class="cl-rule">
+          <svg class="cl-feet" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="16" cy="30" rx="6.5" ry="10"/><circle cx="11" cy="16" r="2.2"/><circle cx="15.5" cy="14" r="2.4"/><circle cx="20" cy="15.5" r="2.1"/><ellipse cx="33" cy="24" rx="6.5" ry="10"/><circle cx="28" cy="10" r="2.2"/><circle cx="32.5" cy="8" r="2.4"/><circle cx="37" cy="9.5" r="2.1"/></svg>
+          <div>
+            <small>House rule</small>
+            <b>No shirt? Welcome aboard. Shoes? You stay on land.</b>
+            <span>Shoes come off at the dock. It keeps the boat and the ocean clean, and means fewer goodbye-floaties.</span>
+          </div>
+        </div>
       </div>
     </div>
     <p class="inc-fee">Holiday guests pay the Bonaire nature fee (STINAPA). Residents don't.</p>
@@ -453,7 +509,7 @@
   </div>
   <div class="inc-photos">
     <img class="p1" src="../img/ss-2-18.jpg" alt="A crew member gets the snorkel gear ready on board" loading="lazy">
-    <img class="p2" src="../img/ss-2-21.jpg" alt="A guest going down the water slide" loading="lazy">
+    <img class="p2" src="../img/crew-drinks.jpg" alt="A crew member hands drinks to two guests relaxing on deck" loading="lazy">
     <img class="p3" src="../img/ss-homep1-1.jpg" alt="Guests relaxing on the floating mat" loading="lazy">
   </div>
 </section>
@@ -488,7 +544,7 @@
 </main>
 
 <footer class="foot">
-  <img class="foot-img" src="../img/ss-2-9.jpg" alt="" loading="lazy">
+  <img class="foot-img" src="../img/snorkel-boat.jpg" alt="" loading="lazy">
   <div class="foot-inner">
     <h2>Ready? Pick your day.</h2>
     <div class="foot-cta">
@@ -547,6 +603,6 @@
 
 <a class="wa-float btn" href="#book">Book a trip</a>
 
-<script src="site.js?v=20261104024703"></script>
+<script src="site.js?v=20261104042125"></script>
 </body>
 </html>

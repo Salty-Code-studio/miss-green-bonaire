@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Urbanist:wght@500..800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="../../img/ss-2-22.jpg">
-<link rel="stylesheet" href="../style.css?v=20261104024703">
-<link rel="stylesheet" href="page.css?v=20261104024703">
+<link rel="stylesheet" href="../style.css?v=20261104042125">
+<link rel="stylesheet" href="page.css?v=20261104042125">
 <script>{ const t = new URLSearchParams(location.search).get("theme"); document.documentElement.dataset.theme = t || "lagoon"; }</script>
 </head>
 <body>
@@ -45,26 +45,56 @@
 
 <main>
 
-<section class="hero hero-page tb-hero" style="--band-top: var(--bg)">
+<section class="hero hero-page tb-hero" style="--band-top: #eef8f7">
   <img class="hero-img" src="../../img/ss-2-22.jpg" alt="" fetchpriority="high">
   <div class="hero-copy">
-    <h1>Meet Miss Green, the quiet electric boat.</h1>
-    <p>Bonaire's first fully electric catamaran.</p>
+    <h1>Meet Miss Green, Bonaire's first fully electric catamaran.</h1>
   </div>
   <div class="hero-wave" aria-hidden="true">
-    <svg class="wave-front" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 62 C240 98 480 22 720 58 C960 94 1200 30 1440 60 V100 H0 Z"/></svg>
+    <svg class="wave-front" viewBox="0 0 1440 100" preserveAspectRatio="none"><defs><pattern id="bpGrid" patternUnits="userSpaceOnUse" width="32" height="32"><rect class="g-bg" width="100%" height="100%" fill="#eef8f7"/><rect class="g-v" width="1" height="100%" fill="rgb(0 148 140 / .1)"/><rect class="g-h" width="100%" height="1" fill="rgb(0 148 140 / .1)"/></pattern></defs><path d="M0 62 C240 98 480 22 720 58 C960 94 1200 30 1440 60 V100 H0 Z"/></svg>
   </div>
 </section>
 
-<section class="tb-intro" aria-label="About the boat">
-  <p class="tb-lead">Miss Green has two hulls and runs on electricity. She glides out to the reef without a roar, without fuel and without smoke.</p>
+<section class="tb-bp" aria-labelledby="bpTitle">
+  <header class="tb-bp-head">
+    <h2 id="bpTitle">The boat in numbers</h2>
+    <p class="tb-bp-lead">Miss Green has two hulls and runs on electricity. She glides out to the reef without a roar, without fuel and without smoke.</p>
+  </header>
+  <div class="tb-bp-grid">
+    <figure class="tb-bp-fig">
+      <figcaption class="tb-bp-bar"><span>Miss Green</span><span>Bonaire</span></figcaption>
+      <div class="tb-bp-frame">
+        <img src="../../img/ss-2-2.jpg" alt="Miss Green from above: two hulls, a shaded top deck, a floating mat and two electric motors at the back" loading="lazy" width="1200" height="800">
+        <svg viewBox="0 0 1200 800" aria-hidden="true"><g class="bp-dim"><path pathLength="1" d="M250 776 H800 M250 764 V788 M800 764 V788"/><text x="525" y="760">TWIN-HULL ELECTRIC CATAMARAN</text></g><g class="bp-call" style="--i:0"><path pathLength="1" d="M560 345 L470 200 H70"/><circle class="ring" cx="560" cy="345" r="10"/><circle cx="560" cy="345" r="10"/><text x="70" y="186">01 SHADED SUN DECK</text></g><g class="bp-call" style="--i:1"><path pathLength="1" d="M740 560 L880 470 H1150"/><circle class="ring" cx="740" cy="560" r="10"/><circle cx="740" cy="560" r="10"/><text x="1150" y="456" text-anchor="end">02 TWIN HULLS</text></g><g class="bp-call" style="--i:2"><path pathLength="1" d="M375 605 L250 520 H70"/><circle class="ring" cx="375" cy="605" r="10"/><circle cx="375" cy="605" r="10"/><text x="70" y="506">03 FLOATING MAT</text></g><g class="bp-call" style="--i:3"><path pathLength="1" d="M420 690 L520 640 H1150"/><circle class="ring" cx="420" cy="690" r="10"/><circle cx="420" cy="690" r="10"/><text x="1150" y="626" text-anchor="end">04 ELECTRIC MOTORS</text></g></svg>
+      </div>
+      <ol class="tb-bp-legend">
+        <li><b>01</b> Shaded sun deck</li><li><b>02</b> Twin hulls</li><li><b>03</b> Floating mat</li><li><b>04</b> Electric motors</li>
+      </ol>
+    </figure>
+    <dl class="tb-bp-stats">
+      <div><dt><b>100%</b><span>Electric</span></dt><dd>No diesel engine on board.</dd></div>
+      <div><dt><b>0</b><span>Litres of fuel</span></dt><dd>Nothing leaks into the sea.</dd></div>
+      <div><dt><b>0</b><span>Exhaust fumes</span></dt><dd>Not on deck, not in the water.</dd></div>
+      <div><dt><b>2</b><span>Hulls</span></dt><dd>A catamaran sits steady and calm.</dd></div>
+      <div><dt><b>2</b><span>Decks</span></dt><dd>With shade on top.</dd></div>
+      <div><dt><b>50</b><span>Guests</span></dt><dd>At most, on a private trip.</dd></div>
+      <div class="wide"><dt><b>1st</b><span>On Bonaire</span></dt><dd>The island's first fully electric catamaran.</dd></div>
+    </dl>
+  </div>
 </section>
 
 <section class="tb-why" aria-labelledby="whyTitle">
   <figure class="tb-why-photo">
-    <img src="../../img/ss-2-12.jpg" alt="A guide snorkels with a guest over the coral reef" loading="lazy" width="1200" height="800">
+    <img src="../../img/ss-2-9.jpg" alt="Miss Green seen from the water: the boat above, clear blue sea below" loading="lazy" width="1200" height="800">
   </figure>
   <div class="tb-why-text">
+    <figure class="tb-qcard tb-qhead">
+      <span class="tb-qstars" role="img" aria-label="5 out of 5 stars"><svg class="star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg class="star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span>
+      <blockquote>
+        <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them.&rdquo;</p>
+      </blockquote>
+      <figcaption class="tb-qwho"><span class="tb-qav" aria-hidden="true">F</span><span><b>Francis F</b><small>Dec 2024</small></span><a href="https://www.tripadvisor.com/Attraction_Review-g147268-d28265259-Reviews-Miss_Green-Kralendijk_Bonaire.html" target="_blank" rel="noopener">Tripadvisor <span aria-hidden="true">&#8599;</span></a></figcaption>
+    </figure>
     <h2 id="whyTitle">Why electric?</h2>
     <p class="tb-sub">Because the reef is our home too.</p>
     <dl class="tb-reasons">
@@ -96,7 +126,7 @@
       <p>Lie in the sun, or sit in the shade when you need a break.</p>
     </li>
     <li>
-      <img src="../../img/ss-2-21.jpg" alt="A happy guest slides down the boat's white water slide" loading="lazy" width="1200" height="800">
+      <img src="../../img/slide-arms-up.jpg" alt="A guest sits at the top of the water slide with her arms up, turquoise sea ahead" loading="lazy" width="1600" height="1066">
       <h3>A water slide</h3>
       <p>Slide straight from the boat into the sea.</p>
     </li>
@@ -112,15 +142,9 @@
   </ul>
 </section>
 
-<section class="tb-quote" aria-label="What a guest said">
-  <blockquote>
-    <p>&ldquo;The electric, eco-friendly catamaran allowed us to enjoy the natural wonders without disturbing them.&rdquo;</p>
-    <cite>Francis F, Tripadvisor</cite>
-  </blockquote>
-</section>
 
 <section class="tb-cta" aria-labelledby="ctaTitle">
-  <img src="../../img/ss-2-9.jpg" alt="Miss Green seen from the water, half above and half below the surface" loading="lazy" width="1200" height="800">
+  <img src="../../img/ss-2-3.jpg" alt="Guests float and swim next to Miss Green" loading="lazy" width="1200" height="800">
   <div>
     <h2 id="ctaTitle">Come and hear the quiet.</h2>
     <p>Pick a day and join us on Miss Green.</p>
@@ -132,17 +156,6 @@
 </section>
 
 </main>
-
-<footer class="foot">
-  <img class="foot-img" src="../../img/ss-2-11.jpg" alt="" loading="lazy">
-  <div class="foot-inner">
-    <h2>Ready? Pick your day.</h2>
-    <div class="foot-cta">
-      <a class="btn btn-big" href="../#book">Book a trip</a>
-      <a class="btn btn-ghost" href="https://wa.me/5997016692">Ask a question on WhatsApp</a>
-    </div>
-  </div>
-</footer>
 
 <footer class="site-foot">
   <div class="sf-grid">
@@ -190,9 +203,8 @@
   </div>
 </footer>
 
-
 <a class="wa-float btn" href="../#book">Book a trip</a>
 
-<script src="../site.js?v=20261104024703"></script>
+<script src="../site.js?v=20261104042125"></script>
 </body>
 </html>
