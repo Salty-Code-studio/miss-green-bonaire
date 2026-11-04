@@ -92,15 +92,16 @@
 .rv-wall::before { content: ""; position: absolute; right: 5%; top: 40%; width: 60%; height: 45%; z-index: -1; background: radial-gradient(closest-side, rgb(248 176 24 / .4), transparent); filter: blur(30px); pointer-events: none; }
 .foot .foot-sub { margin-top: 10px; font-size: clamp(17px, 1.4vw, 20px); color: rgb(255 255 255/.9); max-width: 34ch; }
 /* Write-a-review tile inside the wall: stands out in logo teal */
-.rv-grid .rv-write { break-inside: avoid; max-width: none; margin: 0 0 20px; padding: clamp(28px, 3vw, 36px) 24px; gap: 10px; border-radius: var(--r); background: linear-gradient(160deg, var(--teal) 0%, var(--deep) 100%); color: #fff; box-shadow: 0 22px 44px -24px rgb(0 117 111 / .7); position: relative; overflow: hidden; }
-.rv-grid .rv-write::after { content: ""; position: absolute; right: -50px; top: -50px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(closest-side, rgb(248 176 24 / .35), transparent); pointer-events: none; }
-.rv-grid .rv-write h2 { color: #fff; font-size: clamp(24px, 2.2vw, 30px); }
-.rv-grid .rv-write p, .rv-grid .rv-write small { color: rgb(255 255 255 / .85); }
-.rv-grid .rv-write p { font-size: 16px; }
-.rv-grid .rv-rate { gap: 2px; margin: 4px 0 8px; }
-.rv-grid .rv-rate a { width: 44px; height: 44px; }
-.rv-grid .rv-rate .star { width: 32px; height: 32px; fill: var(--bolt); }
-.rv-grid .rv-rate a:hover ~ a .star, .rv-grid .rv-rate a:focus-visible ~ a .star { fill: rgb(255 255 255 / .3); }
-.rv-grid .rv-rate a:focus-visible { outline-color: #fff; }
-.rv-grid .rv-write .btn { background: var(--bolt); color: var(--ink); width: 100%; white-space: normal; }
-.rv-grid .rv-write .btn:hover { background: #fff; }
+.rv-wall .rv-write { max-width: 560px; margin: clamp(8px, 1.5vw, 16px) auto 0; padding: clamp(28px, 3vw, 36px) 24px; gap: 10px; border-radius: var(--r); background: linear-gradient(160deg, var(--teal) 0%, var(--deep) 100%); color: #fff; box-shadow: 0 22px 44px -24px rgb(0 117 111 / .7); position: relative; overflow: hidden; }
+.rv-wall .rv-write::after { content: ""; position: absolute; right: -50px; top: -50px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(closest-side, rgb(248 176 24 / .35), transparent); pointer-events: none; }
+.rv-wall .rv-write h2 { color: #fff; font-size: clamp(24px, 2.2vw, 30px); }
+.rv-wall .rv-write p, .rv-wall .rv-write small { color: rgb(255 255 255 / .85); }
+.rv-wall .rv-write p { font-size: 16px; }
+.rv-wall .rv-rate { gap: 2px; margin: 4px 0 8px; }
+.rv-wall .rv-rate a { width: 44px; height: 44px; }
+.rv-wall .rv-rate .star { width: 32px; height: 32px; fill: var(--bolt); }
+.rv-wall .rv-rate a:hover ~ a .star, .rv-grid .rv-rate a:focus-visible ~ a .star { fill: rgb(255 255 255 / .3); }
+.rv-wall .rv-rate a:focus-visible { outline-color: #fff; }
+.rv-wall .rv-write .btn { background: var(--bolt); color: var(--ink); width: 100%; white-space: normal; }
+.rv-wall .rv-write .btn:hover { background: #fff; }
+.rv-wall > .rv-write { position: relative; z-index: 1; }
