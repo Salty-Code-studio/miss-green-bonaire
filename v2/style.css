@@ -1042,3 +1042,4 @@ section.eco::before { opacity: .45; }
 .grp-strip b { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 50%; background: #00948c; color: var(--bolt); font-size: 18px; font-weight: 800; }
 .grp-strip strong { color: #00756f; }
 @media (min-width: 1001px) { .wiz-step[data-step="1"] > .grp-strip { grid-column: 1 / -1; } }
+.book-list b { font-weight: inherit; }
